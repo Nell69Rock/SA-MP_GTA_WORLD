@@ -1,0 +1,3 @@
+[22:15:53] [plugins/mysql] CConnection::CConnection - establishing connection to MySQL database failed: #2002 'Can't connect to MySQL server on 'nell69rock.myq-see.com' (10060)'
+[22:16:14] [plugins/mysql] CConnection::CConnection - establishing connection to MySQL database failed: #2002 'Can't connect to MySQL server on 'nell69rock.myq-see.com' (10060)'
+[22:16:35] [plugins/mysql] CConnection::CConnection - establishing connection to MySQL database failed: #2002 'Can't connect to MySQL server on 'nell69rock.myq-see.com' (10060)'

@@ -1,0 +1,136 @@
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.DL-R1, (C)2005-2018 SA-MP Team
+
+[22:12:30] 
+[22:12:30] Server Plugins
+[22:12:30] --------------
+[22:12:30]  Loading plugin: mysql
+[22:12:30]  >> plugin.mysql: R41-4 successfully loaded.
+[22:12:30]   Loaded.
+[22:12:30]  Loading plugin: md5
+[22:12:30]   MD5 v1.2 by BJIADOKC loaded
+[22:12:30]   Loaded.
+[22:12:30]  Loading plugin: streamer
+[22:12:30] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[22:12:30]   Loaded.
+[22:12:30]  Loading plugin: audio
+[22:12:30] 
+
+*** Audio Plugin v0.5 R2 by Incognito loaded ***
+
+[22:12:30]   Loaded.
+[22:12:30]  Loaded 4 plugins.
+
+[22:12:30] 
+[22:12:30] Filterscripts
+[22:12:30] ---------------
+[22:12:30]   Loading filterscript 'ls_elevator.amx'...
+[22:12:30]   Loading filterscript 'ls_mall.amx'...
+[22:12:30]   Loading filterscript 'ls_beachside.amx'...
+[22:12:30] 
+
+[22:12:30]   |---------------------------------------------------
+[22:12:30]   |--- LS BeachSide Filterscript
+[22:12:30]   |--  Script v1.03
+[22:12:30]   |--  19th April 2015
+[22:12:30]   |---------------------------------------------------
+[22:12:30]   |--  LS BeachSide Building Elevator created
+[22:12:30]   |---------------------------------------------------
+[22:12:30]   Loaded 3 filterscripts.
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.DL-R1, (C)2005-2018 SA-MP Team
+
+[22:14:19] 
+[22:14:19] Server Plugins
+[22:14:19] --------------
+[22:14:19]  Loading plugin: mysql
+[22:14:19]  >> plugin.mysql: R41-4 successfully loaded.
+[22:14:19]   Loaded.
+[22:14:19]  Loading plugin: md5
+[22:14:19]   MD5 v1.2 by BJIADOKC loaded
+[22:14:19]   Loaded.
+[22:14:19]  Loading plugin: streamer
+[22:14:19] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[22:14:19]   Loaded.
+[22:14:19]  Loading plugin: audio
+[22:14:19] 
+
+*** Audio Plugin v0.5 R2 by Incognito loaded ***
+
+[22:14:19]   Loaded.
+[22:14:19]  Loaded 4 plugins.
+
+[22:14:19] 
+[22:14:19] Filterscripts
+[22:14:19] ---------------
+[22:14:19]   Loading filterscript 'ls_elevator.amx'...
+[22:14:19]   Loading filterscript 'ls_mall.amx'...
+[22:14:19]   Loading filterscript 'ls_beachside.amx'...
+[22:14:19] 
+
+[22:14:19]   |---------------------------------------------------
+[22:14:19]   |--- LS BeachSide Filterscript
+[22:14:19]   |--  Script v1.03
+[22:14:19]   |--  19th April 2015
+[22:14:19]   |---------------------------------------------------
+[22:14:19]   |--  LS BeachSide Building Elevator created
+[22:14:19]   |---------------------------------------------------
+[22:14:19]   Loaded 3 filterscripts.
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.DL-R1, (C)2005-2018 SA-MP Team
+
+[22:15:31] filterscripts = ""  (string)
+[22:15:31] 
+[22:15:31] Server Plugins
+[22:15:31] --------------
+[22:15:31]  Loading plugin: mysql
+[22:15:31]  >> plugin.mysql: R41-4 successfully loaded.
+[22:15:31]   Loaded.
+[22:15:31]  Loading plugin: md5
+[22:15:31]   MD5 v1.2 by BJIADOKC loaded
+[22:15:31]   Loaded.
+[22:15:31]  Loading plugin: streamer
+[22:15:31] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[22:15:31]   Loaded.
+[22:15:31]  Loading plugin: audio
+[22:15:31] 
+
+*** Audio Plugin v0.5 R2 by Incognito loaded ***
+
+[22:15:31]   Loaded.
+[22:15:31]  Loaded 4 plugins.
+
+[22:15:31] 
+[22:15:31] Filterscripts
+[22:15:31] ---------------
+[22:15:31]   Loaded 0 filterscripts.
+

@@ -1,0 +1,994 @@
+[00:03:22] [INFO] changed log level from 'warning, error' to 'debug, info, warning, error'
+[00:03:22] [DEBUG] mysql_set_charset("euckr", 1) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:105)
+[00:03:22] [DEBUG] CHandle::SetCharacterSet(this=0x56e6a8, charset='euckr')
+[00:03:22] [DEBUG] CConnection::SetCharset(charset='euckr', this=0x5621f0, connection=0x571be8)
+[00:03:22] [DEBUG] CConnection::SetCharset(charset='euckr', this=0x12c3d020, connection=0x593480)
+[00:03:22] [DEBUG] CConnectionPool::SetCharset(charset='euckr', this=0x5620b0)
+[00:03:22] [DEBUG] CConnection::SetCharset(charset='euckr', this=0x12e01020, connection=0x59d470)
+[00:03:22] [DEBUG] CConnection::SetCharset(charset='euckr', this=0x12fdf020, connection=0x5a7ca0)
+[00:03:22] [DEBUG] mysql_set_charset: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:105)
+[00:03:22] [DEBUG] mysql_format(1, 0x128A340C, 128, "SELECT * FROM `enter/exit`;") (userfunction.pwn:1005 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:115)
+[00:03:22] [DEBUG] mysql_format: return value: '27' (userfunction.pwn:1005 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:115)
+[00:03:22] [DEBUG] mysql_tquery(1, "SELECT * FROM `enter/exit`;", "LoadEnterExitData", "") (userfunction.pwn:1006 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:115)
+[00:03:22] [DEBUG] CCallback::Create(amx=0x2a87c30, name='LoadEnterExitData', format='', params=0x128a33f8, param_offset=5)
+[00:03:22] [DEBUG] CCallback::Create - callback index for 'LoadEnterExitData': 21
+[00:03:22] [INFO] Callback 'LoadEnterExitData' set up for delayed execution.
+[00:03:22] [DEBUG] created delayed callback with 0 parameter
+[00:03:22] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x5562a0)
+[00:03:22] [DEBUG] CHandle::Execute - return value: true
+[00:03:22] [DEBUG] mysql_tquery: return value: '1' (userfunction.pwn:1006 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:115)
+[00:03:22] [DEBUG] CConnection::Execute(query=0x5562a0, this=0x12c3d020, connection=0x593480)
+[00:03:22] [DEBUG] CQuery::Execute(this=0x5562a0, connection=0x593480)
+[00:03:22] [DEBUG] mysql_format(1, 0x128A340C, 128, "SELECT * FROM buy;") (userfunction.pwn:953 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:116)
+[00:03:22] [DEBUG] mysql_format: return value: '18' (userfunction.pwn:953 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:116)
+[00:03:22] [DEBUG] mysql_tquery(1, "SELECT * FROM buy;", "LoadBuyData", "") (userfunction.pwn:954 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:116)
+[00:03:22] [DEBUG] CCallback::Create(amx=0x2a87c30, name='LoadBuyData', format='', params=0x128a33f8, param_offset=5)
+[00:03:22] [DEBUG] CCallback::Create - callback index for 'LoadBuyData': 20
+[00:03:22] [INFO] Callback 'LoadBuyData' set up for delayed execution.
+[00:03:22] [DEBUG] created delayed callback with 0 parameter
+[00:03:22] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x556040)
+[00:03:22] [DEBUG] CHandle::Execute - return value: true
+[00:03:22] [DEBUG] mysql_tquery: return value: '1' (userfunction.pwn:954 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:116)
+[00:03:22] [DEBUG] mysql_format(1, 0x128A340C, 128, "SELECT * FROM vehicle;") (userfunction.pwn:959 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:117)
+[00:03:22] [DEBUG] mysql_format: return value: '22' (userfunction.pwn:959 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:117)
+[00:03:22] [DEBUG] mysql_tquery(1, "SELECT * FROM vehicle;", "LoadVehicleData", "") (userfunction.pwn:960 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:117)
+[00:03:22] [DEBUG] CCallback::Create(amx=0x2a87c30, name='LoadVehicleData', format='', params=0x128a33f8, param_offset=5)
+[00:03:22] [DEBUG] CCallback::Create - callback index for 'LoadVehicleData': 33
+[00:03:22] [INFO] Callback 'LoadVehicleData' set up for delayed execution.
+[00:03:22] [DEBUG] created delayed callback with 0 parameter
+[00:03:22] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x5563d0)
+[00:03:22] [DEBUG] CHandle::Execute - return value: true
+[00:03:22] [DEBUG] mysql_tquery: return value: '1' (userfunction.pwn:960 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:117)
+[00:03:22] [DEBUG] mysql_format(1, 0x128A340C, 128, "SELECT * FROM mapIcon;") (userfunction.pwn:1241 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:118)
+[00:03:22] [DEBUG] mysql_format: return value: '22' (userfunction.pwn:1241 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:118)
+[00:03:22] [DEBUG] mysql_tquery(1, "SELECT * FROM mapIcon;", "LoadMapIcon", "") (userfunction.pwn:1242 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:118)
+[00:03:22] [DEBUG] CCallback::Create(amx=0x2a87c30, name='LoadMapIcon', format='', params=0x128a33f8, param_offset=5)
+[00:03:22] [DEBUG] CCallback::Create - callback index for 'LoadMapIcon': 23
+[00:03:22] [INFO] Callback 'LoadMapIcon' set up for delayed execution.
+[00:03:22] [DEBUG] created delayed callback with 0 parameter
+[00:03:22] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x556468)
+[00:03:22] [DEBUG] CHandle::Execute - return value: true
+[00:03:22] [DEBUG] mysql_tquery: return value: '1' (userfunction.pwn:1242 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:118)
+[00:03:22] [DEBUG] mysql_format(1, 0x128A340C, 128, "SELECT * FROM actor;") (userfunction.pwn:1179 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:119)
+[00:03:22] [DEBUG] mysql_format: return value: '20' (userfunction.pwn:1179 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:119)
+[00:03:22] [DEBUG] mysql_tquery(1, "SELECT * FROM actor;", "LoadActorData", "") (userfunction.pwn:1180 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:119)
+[00:03:22] [DEBUG] CCallback::Create(amx=0x2a87c30, name='LoadActorData', format='', params=0x128a33f8, param_offset=5)
+[00:03:22] [DEBUG] CCallback::Create - callback index for 'LoadActorData': 18
+[00:03:22] [INFO] Callback 'LoadActorData' set up for delayed execution.
+[00:03:22] [DEBUG] created delayed callback with 0 parameter
+[00:03:22] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x556500)
+[00:03:22] [DEBUG] CHandle::Execute - return value: true
+[00:03:22] [DEBUG] mysql_tquery: return value: '1' (userfunction.pwn:1180 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:119)
+[00:03:22] [DEBUG] mysql_format(1, 0x128A340C, 128, "SELECT * FROM joblist ORDER BY joblist.number ASC;") (userfunction.pwn:1185 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:123)
+[00:03:22] [DEBUG] mysql_format: return value: '50' (userfunction.pwn:1185 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:123)
+[00:03:22] [DEBUG] mysql_tquery(1, "SELECT * FROM joblist ORDER BY joblist.number ASC;", "LoadJobList", "") (userfunction.pwn:1186 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:123)
+[00:03:22] [DEBUG] CCallback::Create(amx=0x2a87c30, name='LoadJobList', format='', params=0x128a33f8, param_offset=5)
+[00:03:22] [DEBUG] CCallback::Create - callback index for 'LoadJobList': 22
+[00:03:22] [INFO] Callback 'LoadJobList' set up for delayed execution.
+[00:03:22] [DEBUG] created delayed callback with 0 parameter
+[00:03:22] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x555628)
+[00:03:22] [DEBUG] CHandle::Execute - return value: true
+[00:03:22] [DEBUG] mysql_tquery: return value: '1' (userfunction.pwn:1186 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:123)
+[00:03:22] [INFO] query "SELECT * FROM `enter/exit`;" successfully executed within 36.844 milliseconds
+[00:03:22] [DEBUG] CResultSet::Create(connection=0x593480, query_str='SELECT * FROM `enter/exit`;')
+[00:03:22] [DEBUG] created new resultset '0x5ae5d8'
+[00:03:22] [DEBUG] fetched MySQL result '0x599d08'
+[00:03:22] [DEBUG] allocated 528 bytes for PAWN result
+[00:03:22] [DEBUG] CConnection::Execute(query=0x556040, this=0x12c3d020, connection=0x593480)
+[00:03:22] [DEBUG] CQuery::Execute(this=0x556040, connection=0x593480)
+[00:03:22] [DEBUG] CCallback::Execute(amx=0x2a87c30, index=21, num_params=0)
+[00:03:22] [INFO] Executing callback 'LoadEnterExitData' with 0 parameter...
+[00:03:22] [DEBUG] executing AMX callback with index '21'
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1009)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1009)
+[00:03:22] [DEBUG] cache_get_value_name_int(0, "enterInt", 0x0FF536DC) (userfunction.pwn:1012)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '17' (userfunction.pwn:1012)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1012)
+[00:03:22] [DEBUG] cache_get_value_name_int(0, "virtualWorld", 0x0FF536E0) (userfunction.pwn:1013)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '1' (userfunction.pwn:1013)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1013)
+[00:03:22] [DEBUG] cache_get_value_name_float(0, "enterX", 0x0FF536E4) (userfunction.pwn:1014)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '-25.9741' (userfunction.pwn:1014)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1014)
+[00:03:22] [DEBUG] cache_get_value_name_float(0, "enterY", 0x0FF536E8) (userfunction.pwn:1015)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '-188.259' (userfunction.pwn:1015)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1015)
+[00:03:22] [DEBUG] cache_get_value_name_float(0, "enterZ", 0x0FF536EC) (userfunction.pwn:1016)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '1003.55' (userfunction.pwn:1016)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1016)
+[00:03:22] [DEBUG] cache_get_value_name_int(0, "exitInt", 0x0FF536F0) (userfunction.pwn:1018)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '0' (userfunction.pwn:1018)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1018)
+[00:03:22] [DEBUG] cache_get_value_name_int(0, "exitVirtual", 0x0FF536F4) (userfunction.pwn:1019)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '0' (userfunction.pwn:1019)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1019)
+[00:03:22] [DEBUG] cache_get_value_name_float(0, "exitX", 0x0FF536F8) (userfunction.pwn:1020)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '1352.31' (userfunction.pwn:1020)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1020)
+[00:03:22] [DEBUG] cache_get_value_name_float(0, "exitY", 0x0FF536FC) (userfunction.pwn:1021)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '-1759.25' (userfunction.pwn:1021)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1021)
+[00:03:22] [DEBUG] cache_get_value_name_float(0, "exitZ", 0x0FF53700) (userfunction.pwn:1022)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '13.5078' (userfunction.pwn:1022)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1022)
+[00:03:22] [DEBUG] cache_get_value_name(0, "comment", 0x0FF53704, 1) (userfunction.pwn:1023)
+[00:03:22] [DEBUG] cache_get_value_name: assigned value: 'nell2' (userfunction.pwn:1023)
+[00:03:22] [DEBUG] cache_get_value_name: return value: '1' (userfunction.pwn:1023)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1009)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1009)
+[00:03:22] [DEBUG] cache_get_value_name_int(1, "enterInt", 0x0FF537CC) (userfunction.pwn:1012)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '15' (userfunction.pwn:1012)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1012)
+[00:03:22] [DEBUG] cache_get_value_name_int(1, "virtualWorld", 0x0FF537D0) (userfunction.pwn:1013)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '2' (userfunction.pwn:1013)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1013)
+[00:03:22] [DEBUG] cache_get_value_name_float(1, "enterX", 0x0FF537D4) (userfunction.pwn:1014)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '207.726' (userfunction.pwn:1014)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1014)
+[00:03:22] [DEBUG] cache_get_value_name_float(1, "enterY", 0x0FF537D8) (userfunction.pwn:1015)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '-111.264' (userfunction.pwn:1015)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1015)
+[00:03:22] [DEBUG] cache_get_value_name_float(1, "enterZ", 0x0FF537DC) (userfunction.pwn:1016)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '1005.13' (userfunction.pwn:1016)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1016)
+[00:03:22] [DEBUG] cache_get_value_name_int(1, "exitInt", 0x0FF537E0) (userfunction.pwn:1018)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '0' (userfunction.pwn:1018)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1018)
+[00:03:22] [DEBUG] cache_get_value_name_int(1, "exitVirtual", 0x0FF537E4) (userfunction.pwn:1019)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '0' (userfunction.pwn:1019)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1019)
+[00:03:22] [DEBUG] cache_get_value_name_float(1, "exitX", 0x0FF537E8) (userfunction.pwn:1020)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '2244.38' (userfunction.pwn:1020)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1020)
+[00:03:22] [DEBUG] cache_get_value_name_float(1, "exitY", 0x0FF537EC) (userfunction.pwn:1021)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '-1665.26' (userfunction.pwn:1021)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1021)
+[00:03:22] [DEBUG] cache_get_value_name_float(1, "exitZ", 0x0FF537F0) (userfunction.pwn:1022)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '15.4766' (userfunction.pwn:1022)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1022)
+[00:03:22] [DEBUG] cache_get_value_name(1, "comment", 0x0FF537F4, 1) (userfunction.pwn:1023)
+[00:03:22] [DEBUG] cache_get_value_name: assigned value: 'Gonjals_Bocachio' (userfunction.pwn:1023)
+[00:03:22] [DEBUG] cache_get_value_name: return value: '1' (userfunction.pwn:1023)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1009)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1009)
+[00:03:22] [DEBUG] cache_get_value_name_int(2, "enterInt", 0x0FF538BC) (userfunction.pwn:1012)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '6' (userfunction.pwn:1012)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1012)
+[00:03:22] [DEBUG] cache_get_value_name_int(2, "virtualWorld", 0x0FF538C0) (userfunction.pwn:1013)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '3' (userfunction.pwn:1013)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1013)
+[00:03:22] [DEBUG] cache_get_value_name_float(2, "enterX", 0x0FF538C4) (userfunction.pwn:1014)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '246.745' (userfunction.pwn:1014)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1014)
+[00:03:22] [DEBUG] cache_get_value_name_float(2, "enterY", 0x0FF538C8) (userfunction.pwn:1015)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '62.324' (userfunction.pwn:1015)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1015)
+[00:03:22] [DEBUG] cache_get_value_name_float(2, "enterZ", 0x0FF538CC) (userfunction.pwn:1016)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '1003.64' (userfunction.pwn:1016)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1016)
+[00:03:22] [DEBUG] cache_get_value_name_int(2, "exitInt", 0x0FF538D0) (userfunction.pwn:1018)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '0' (userfunction.pwn:1018)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1018)
+[00:03:22] [DEBUG] cache_get_value_name_int(2, "exitVirtual", 0x0FF538D4) (userfunction.pwn:1019)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '0' (userfunction.pwn:1019)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1019)
+[00:03:22] [DEBUG] cache_get_value_name_float(2, "exitX", 0x0FF538D8) (userfunction.pwn:1020)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '1555.51' (userfunction.pwn:1020)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1020)
+[00:03:22] [DEBUG] cache_get_value_name_float(2, "exitY", 0x0FF538DC) (userfunction.pwn:1021)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '-1675.7' (userfunction.pwn:1021)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1021)
+[00:03:22] [DEBUG] cache_get_value_name_float(2, "exitZ", 0x0FF538E0) (userfunction.pwn:1022)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '16.1953' (userfunction.pwn:1022)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1022)
+[00:03:22] [DEBUG] cache_get_value_name(2, "comment", 0x0FF538E4, 1) (userfunction.pwn:1023)
+[00:03:22] [DEBUG] cache_get_value_name: assigned value: 'Gonjals_Bocachio' (userfunction.pwn:1023)
+[00:03:22] [DEBUG] cache_get_value_name: return value: '1' (userfunction.pwn:1023)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1009)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1009)
+[00:03:22] [DEBUG] cache_get_value_name_int(3, "enterInt", 0x0FF539AC) (userfunction.pwn:1012)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '3' (userfunction.pwn:1012)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1012)
+[00:03:22] [DEBUG] cache_get_value_name_int(3, "virtualWorld", 0x0FF539B0) (userfunction.pwn:1013)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '1' (userfunction.pwn:1013)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1013)
+[00:03:22] [DEBUG] cache_get_value_name_float(3, "enterX", 0x0FF539B4) (userfunction.pwn:1014)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '1494.44' (userfunction.pwn:1014)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1014)
+[00:03:22] [DEBUG] cache_get_value_name_float(3, "enterY", 0x0FF539B8) (userfunction.pwn:1015)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '1303.58' (userfunction.pwn:1015)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1015)
+[00:03:22] [DEBUG] cache_get_value_name_float(3, "enterZ", 0x0FF539BC) (userfunction.pwn:1016)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '1093.29' (userfunction.pwn:1016)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1016)
+[00:03:22] [DEBUG] cache_get_value_name_int(3, "exitInt", 0x0FF539C0) (userfunction.pwn:1018)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '0' (userfunction.pwn:1018)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1018)
+[00:03:22] [DEBUG] cache_get_value_name_int(3, "exitVirtual", 0x0FF539C4) (userfunction.pwn:1019)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '0' (userfunction.pwn:1019)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1019)
+[00:03:22] [DEBUG] cache_get_value_name_float(3, "exitX", 0x0FF539C8) (userfunction.pwn:1020)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '2131.79' (userfunction.pwn:1020)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1020)
+[00:03:22] [DEBUG] cache_get_value_name_float(3, "exitY", 0x0FF539CC) (userfunction.pwn:1021)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '-1151.32' (userfunction.pwn:1021)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1021)
+[00:03:22] [DEBUG] cache_get_value_name_float(3, "exitZ", 0x0FF539D0) (userfunction.pwn:1022)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '24.0597' (userfunction.pwn:1022)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1022)
+[00:03:22] [DEBUG] cache_get_value_name(3, "comment", 0x0FF539D4, 1) (userfunction.pwn:1023)
+[00:03:22] [DEBUG] cache_get_value_name: assigned value: 'nell2' (userfunction.pwn:1023)
+[00:03:22] [DEBUG] cache_get_value_name: return value: '1' (userfunction.pwn:1023)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1009)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1009)
+[00:03:22] [DEBUG] AMX callback executed with error '0'
+[00:03:22] [INFO] Callback successfully executed.
+[00:03:22] [INFO] query "SELECT * FROM buy;" successfully executed within 25.150 milliseconds
+[00:03:22] [DEBUG] CResultSet::Create(connection=0x593480, query_str='SELECT * FROM buy;')
+[00:03:22] [DEBUG] created new resultset '0x5bc580'
+[00:03:22] [DEBUG] fetched MySQL result '0x573d80'
+[00:03:22] [DEBUG] allocated 272 bytes for PAWN result
+[00:03:22] [DEBUG] CConnection::Execute(query=0x5563d0, this=0x12c3d020, connection=0x593480)
+[00:03:22] [DEBUG] CQuery::Execute(this=0x5563d0, connection=0x593480)
+[00:03:22] [DEBUG] CCallback::Execute(amx=0x2a87c30, index=20, num_params=0)
+[00:03:22] [INFO] Executing callback 'LoadBuyData' with 0 parameter...
+[00:03:22] [DEBUG] executing AMX callback with index '20'
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:988)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:988)
+[00:03:22] [DEBUG] cache_get_value_name_int(0, "virtualWorld", 0x100476DC) (userfunction.pwn:991)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '1' (userfunction.pwn:991)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:991)
+[00:03:22] [DEBUG] cache_get_value_name_float(0, "buyX", 0x100476E4) (userfunction.pwn:992)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '-10.4276' (userfunction.pwn:992)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:992)
+[00:03:22] [DEBUG] cache_get_value_name_float(0, "buyY", 0x100476E8) (userfunction.pwn:993)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '-178.254' (userfunction.pwn:993)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:993)
+[00:03:22] [DEBUG] cache_get_value_name_float(0, "buyZ", 0x100476EC) (userfunction.pwn:994)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '1003.55' (userfunction.pwn:994)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:994)
+[00:03:22] [DEBUG] cache_get_value_name_int(0, "buyInt", 0x100476E0) (userfunction.pwn:995)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '17' (userfunction.pwn:995)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:995)
+[00:03:22] [DEBUG] cache_get_value_name_int(0, "feature", 0x100476F0) (userfunction.pwn:996)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '3' (userfunction.pwn:996)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:996)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:988)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:988)
+[00:03:22] [DEBUG] cache_get_value_name_int(1, "virtualWorld", 0x100476F4) (userfunction.pwn:991)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '2' (userfunction.pwn:991)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:991)
+[00:03:22] [DEBUG] cache_get_value_name_float(1, "buyX", 0x100476FC) (userfunction.pwn:992)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '207.609' (userfunction.pwn:992)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:992)
+[00:03:22] [DEBUG] cache_get_value_name_float(1, "buyY", 0x10047700) (userfunction.pwn:993)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '-100.33' (userfunction.pwn:993)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:993)
+[00:03:22] [DEBUG] cache_get_value_name_float(1, "buyZ", 0x10047704) (userfunction.pwn:994)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '1005.26' (userfunction.pwn:994)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:994)
+[00:03:22] [DEBUG] cache_get_value_name_int(1, "buyInt", 0x100476F8) (userfunction.pwn:995)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '15' (userfunction.pwn:995)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:995)
+[00:03:22] [DEBUG] cache_get_value_name_int(1, "feature", 0x10047708) (userfunction.pwn:996)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '0' (userfunction.pwn:996)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:996)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:988)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:988)
+[00:03:22] [DEBUG] cache_get_value_name_int(2, "virtualWorld", 0x1004770C) (userfunction.pwn:991)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '1' (userfunction.pwn:991)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:991)
+[00:03:22] [DEBUG] cache_get_value_name_float(2, "buyX", 0x10047714) (userfunction.pwn:992)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '1490.29' (userfunction.pwn:992)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:992)
+[00:03:22] [DEBUG] cache_get_value_name_float(2, "buyY", 0x10047718) (userfunction.pwn:993)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '1305.59' (userfunction.pwn:993)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:993)
+[00:03:22] [DEBUG] cache_get_value_name_float(2, "buyZ", 0x1004771C) (userfunction.pwn:994)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '1093.3' (userfunction.pwn:994)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:994)
+[00:03:22] [DEBUG] cache_get_value_name_int(2, "buyInt", 0x10047710) (userfunction.pwn:995)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '3' (userfunction.pwn:995)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:995)
+[00:03:22] [DEBUG] cache_get_value_name_int(2, "feature", 0x10047720) (userfunction.pwn:996)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '4' (userfunction.pwn:996)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:996)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:988)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:988)
+[00:03:22] [DEBUG] cache_get_value_name_int(3, "virtualWorld", 0x10047724) (userfunction.pwn:991)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '0' (userfunction.pwn:991)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:991)
+[00:03:22] [DEBUG] cache_get_value_name_float(3, "buyX", 0x1004772C) (userfunction.pwn:992)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '2380.15' (userfunction.pwn:992)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:992)
+[00:03:22] [DEBUG] cache_get_value_name_float(3, "buyY", 0x10047730) (userfunction.pwn:993)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '-2017.46' (userfunction.pwn:993)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:993)
+[00:03:22] [DEBUG] cache_get_value_name_float(3, "buyZ", 0x10047734) (userfunction.pwn:994)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '14.8329' (userfunction.pwn:994)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:994)
+[00:03:22] [DEBUG] cache_get_value_name_int(3, "buyInt", 0x10047728) (userfunction.pwn:995)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '0' (userfunction.pwn:995)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:995)
+[00:03:22] [DEBUG] cache_get_value_name_int(3, "feature", 0x10047738) (userfunction.pwn:996)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '5' (userfunction.pwn:996)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:996)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:988)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:988)
+[00:03:22] [DEBUG] AMX callback executed with error '0'
+[00:03:22] [INFO] Callback successfully executed.
+[00:03:22] [INFO] query "SELECT * FROM vehicle;" successfully executed within 27.101 milliseconds
+[00:03:22] [DEBUG] CResultSet::Create(connection=0x593480, query_str='SELECT * FROM vehicle;')
+[00:03:22] [DEBUG] created new resultset '0x5c6b28'
+[00:03:22] [DEBUG] fetched MySQL result '0x599b70'
+[00:03:22] [DEBUG] allocated 124 bytes for PAWN result
+[00:03:22] [DEBUG] CConnection::Execute(query=0x556468, this=0x12c3d020, connection=0x593480)
+[00:03:22] [DEBUG] CQuery::Execute(this=0x556468, connection=0x593480)
+[00:03:22] [DEBUG] CCallback::Execute(amx=0x2a87c30, index=33, num_params=0)
+[00:03:22] [INFO] Executing callback 'LoadVehicleData' with 0 parameter...
+[00:03:22] [DEBUG] executing AMX callback with index '33'
+[00:03:22] [DEBUG] cache_get_row_count(0x128A36D0) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:966)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:966)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A36C8) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:968)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:968)
+[00:03:22] [DEBUG] cache_get_value_name(0, "id", 0x128A3708, 24) (userfunction.pwn:971)
+[00:03:22] [DEBUG] cache_get_value_name: assigned value: 'Gonjals_Bocachio' (userfunction.pwn:971)
+[00:03:22] [DEBUG] cache_get_value_name: return value: '1' (userfunction.pwn:971)
+[00:03:22] [DEBUG] cache_get_value_name_int(0, "vModel", 0x128A3704) (userfunction.pwn:972)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '506' (userfunction.pwn:972)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:972)
+[00:03:22] [DEBUG] cache_get_value_name_float(0, "vHealth", 0x128A36E0) (userfunction.pwn:973)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '1000' (userfunction.pwn:973)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:973)
+[00:03:22] [DEBUG] cache_get_value_name_float(0, "X", 0x128A36F0) (userfunction.pwn:974)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '1536.21' (userfunction.pwn:974)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:974)
+[00:03:22] [DEBUG] cache_get_value_name_float(0, "Y", 0x128A36EC) (userfunction.pwn:975)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '-1678.92' (userfunction.pwn:975)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:975)
+[00:03:22] [DEBUG] cache_get_value_name_float(0, "Z", 0x128A36E8) (userfunction.pwn:976)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '13.0873' (userfunction.pwn:976)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:976)
+[00:03:22] [DEBUG] cache_get_value_name_float(0, "vAngle", 0x128A36E4) (userfunction.pwn:977)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '179.493' (userfunction.pwn:977)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:977)
+[00:03:22] [DEBUG] cache_get_value_name_int(0, "vColor1", 0x128A3700) (userfunction.pwn:978)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '0' (userfunction.pwn:978)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:978)
+[00:03:22] [DEBUG] cache_get_value_name_int(0, "vColor2", 0x128A36FC) (userfunction.pwn:979)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '0' (userfunction.pwn:979)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:979)
+[00:03:22] [DEBUG] cache_get_value_name_int(0, "vFuel", 0x128A36F8) (userfunction.pwn:980)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '1774' (userfunction.pwn:980)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:980)
+[00:03:22] [DEBUG] cache_get_value_name_int(0, "vJob", 0x128A36F4) (userfunction.pwn:981)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '0' (userfunction.pwn:981)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:981)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A36C8) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:968)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:968)
+[00:03:22] [DEBUG] AMX callback executed with error '0'
+[00:03:22] [INFO] Callback successfully executed.
+[00:03:22] [INFO] query "SELECT * FROM mapIcon;" successfully executed within 23.931 milliseconds
+[00:03:22] [DEBUG] CResultSet::Create(connection=0x593480, query_str='SELECT * FROM mapIcon;')
+[00:03:22] [DEBUG] created new resultset '0x5c6a48'
+[00:03:22] [DEBUG] fetched MySQL result '0x5b3ae8'
+[00:03:22] [DEBUG] allocated 240 bytes for PAWN result
+[00:03:22] [DEBUG] CConnection::Execute(query=0x556500, this=0x12c3d020, connection=0x593480)
+[00:03:22] [DEBUG] CQuery::Execute(this=0x556500, connection=0x593480)
+[00:03:22] [DEBUG] CCallback::Execute(amx=0x2a87c30, index=23, num_params=0)
+[00:03:22] [INFO] Executing callback 'LoadMapIcon' with 0 parameter...
+[00:03:22] [DEBUG] executing AMX callback with index '23'
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3758) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1215)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1215)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3740) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1218)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1218)
+[00:03:22] [DEBUG] cache_get_value_name_int(0, "iconNum", 0x128A3764) (userfunction.pwn:1221)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '12' (userfunction.pwn:1221)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1221)
+[00:03:22] [DEBUG] cache_get_value_name_float(0, "X", 0x128A3760) (userfunction.pwn:1222)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '1352.43' (userfunction.pwn:1222)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1222)
+[00:03:22] [DEBUG] cache_get_value_name_float(0, "Y", 0x128A375C) (userfunction.pwn:1223)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '-1759.25' (userfunction.pwn:1223)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1223)
+[00:03:22] [DEBUG] cache_get_value_name_float(0, "Z", 0x128A3758) (userfunction.pwn:1224)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '13.5078' (userfunction.pwn:1224)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1224)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3740) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1218)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1218)
+[00:03:22] [DEBUG] cache_get_value_name_int(1, "iconNum", 0x128A3764) (userfunction.pwn:1221)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '30' (userfunction.pwn:1221)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1221)
+[00:03:22] [DEBUG] cache_get_value_name_float(1, "X", 0x128A3760) (userfunction.pwn:1222)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '1555.5' (userfunction.pwn:1222)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1222)
+[00:03:22] [DEBUG] cache_get_value_name_float(1, "Y", 0x128A375C) (userfunction.pwn:1223)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '-1675.61' (userfunction.pwn:1223)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1223)
+[00:03:22] [DEBUG] cache_get_value_name_float(1, "Z", 0x128A3758) (userfunction.pwn:1224)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '16.1953' (userfunction.pwn:1224)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1224)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3740) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1218)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1218)
+[00:03:22] [DEBUG] cache_get_value_name_int(2, "iconNum", 0x128A3764) (userfunction.pwn:1221)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '45' (userfunction.pwn:1221)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1221)
+[00:03:22] [DEBUG] cache_get_value_name_float(2, "X", 0x128A3760) (userfunction.pwn:1222)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '2244.37' (userfunction.pwn:1222)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1222)
+[00:03:22] [DEBUG] cache_get_value_name_float(2, "Y", 0x128A375C) (userfunction.pwn:1223)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '-1665.56' (userfunction.pwn:1223)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1223)
+[00:03:22] [DEBUG] cache_get_value_name_float(2, "Z", 0x128A3758) (userfunction.pwn:1224)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '15.4766' (userfunction.pwn:1224)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1224)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3740) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1218)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1218)
+[00:03:22] [DEBUG] cache_get_value_name_int(3, "iconNum", 0x128A3764) (userfunction.pwn:1221)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '51' (userfunction.pwn:1221)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1221)
+[00:03:22] [DEBUG] cache_get_value_name_float(3, "X", 0x128A3760) (userfunction.pwn:1222)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '2380.04' (userfunction.pwn:1222)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1222)
+[00:03:22] [DEBUG] cache_get_value_name_float(3, "Y", 0x128A375C) (userfunction.pwn:1223)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '-2016.23' (userfunction.pwn:1223)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1223)
+[00:03:22] [DEBUG] cache_get_value_name_float(3, "Z", 0x128A3758) (userfunction.pwn:1224)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '14.8329' (userfunction.pwn:1224)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1224)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3740) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1218)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1218)
+[00:03:22] [DEBUG] AMX callback executed with error '0'
+[00:03:22] [INFO] Callback successfully executed.
+[00:03:22] [INFO] query "SELECT * FROM actor;" successfully executed within 25.256 milliseconds
+[00:03:22] [DEBUG] CResultSet::Create(connection=0x593480, query_str='SELECT * FROM actor;')
+[00:03:22] [DEBUG] created new resultset '0x5c7c30'
+[00:03:22] [DEBUG] fetched MySQL result '0x587908'
+[00:03:22] [DEBUG] allocated 168 bytes for PAWN result
+[00:03:22] [DEBUG] CConnection::Execute(query=0x555628, this=0x12c3d020, connection=0x593480)
+[00:03:22] [DEBUG] CQuery::Execute(this=0x555628, connection=0x593480)
+[00:03:22] [DEBUG] CCallback::Execute(amx=0x2a87c30, index=18, num_params=0)
+[00:03:22] [INFO] Executing callback 'LoadActorData' with 0 parameter...
+[00:03:22] [DEBUG] executing AMX callback with index '18'
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3758) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1158)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1158)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3734) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1161)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1161)
+[00:03:22] [DEBUG] cache_get_value_name_int(0, "actorskin", 0x128A3764) (userfunction.pwn:1164)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '180' (userfunction.pwn:1164)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1164)
+[00:03:22] [DEBUG] cache_get_value_name_float(0, "x", 0x128A3760) (userfunction.pwn:1165)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '-10.3761' (userfunction.pwn:1165)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1165)
+[00:03:22] [DEBUG] cache_get_value_name_float(0, "y", 0x128A375C) (userfunction.pwn:1166)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '-179.94' (userfunction.pwn:1166)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1166)
+[00:03:22] [DEBUG] cache_get_value_name_float(0, "z", 0x128A3758) (userfunction.pwn:1167)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '1003.55' (userfunction.pwn:1167)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1167)
+[00:03:22] [DEBUG] cache_get_value_name_float(0, "angle", 0x128A3754) (userfunction.pwn:1168)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '358.747' (userfunction.pwn:1168)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1168)
+[00:03:22] [DEBUG] cache_get_value_name_int(0, "attack", 0x128A3750) (userfunction.pwn:1169)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '1' (userfunction.pwn:1169)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1169)
+[00:03:22] [DEBUG] cache_get_value_name_int(0, "vworld", 0x128A374C) (userfunction.pwn:1170)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '1' (userfunction.pwn:1170)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1170)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3734) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1161)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1161)
+[00:03:22] [DEBUG] cache_get_value_name_int(1, "actorskin", 0x128A3764) (userfunction.pwn:1164)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '216' (userfunction.pwn:1164)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1164)
+[00:03:22] [DEBUG] cache_get_value_name_float(1, "x", 0x128A3760) (userfunction.pwn:1165)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '207.566' (userfunction.pwn:1165)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1165)
+[00:03:22] [DEBUG] cache_get_value_name_float(1, "y", 0x128A375C) (userfunction.pwn:1166)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '-98.702' (userfunction.pwn:1166)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1166)
+[00:03:22] [DEBUG] cache_get_value_name_float(1, "z", 0x128A3758) (userfunction.pwn:1167)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '1005.26' (userfunction.pwn:1167)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1167)
+[00:03:22] [DEBUG] cache_get_value_name_float(1, "angle", 0x128A3754) (userfunction.pwn:1168)
+[00:03:22] [DEBUG] cache_get_value_name_float: assigned value: '180.122' (userfunction.pwn:1168)
+[00:03:22] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1168)
+[00:03:22] [DEBUG] cache_get_value_name_int(1, "attack", 0x128A3750) (userfunction.pwn:1169)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '1' (userfunction.pwn:1169)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1169)
+[00:03:22] [DEBUG] cache_get_value_name_int(1, "vworld", 0x128A374C) (userfunction.pwn:1170)
+[00:03:22] [DEBUG] cache_get_value_name_int: assigned value: '2' (userfunction.pwn:1170)
+[00:03:22] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1170)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3734) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1161)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1161)
+[00:03:22] [DEBUG] AMX callback executed with error '0'
+[00:03:22] [INFO] Callback successfully executed.
+[00:03:22] [INFO] query "SELECT * FROM joblist ORDER BY joblist.number ASC;" successfully executed within 29.658 milliseconds
+[00:03:22] [DEBUG] CResultSet::Create(connection=0x593480, query_str='SELECT * FROM joblist ORDER BY joblist.number ASC;')
+[00:03:22] [DEBUG] created new resultset '0x5c7c30'
+[00:03:22] [DEBUG] fetched MySQL result '0x54edf8'
+[00:03:22] [DEBUG] allocated 252 bytes for PAWN result
+[00:03:22] [DEBUG] CCallback::Execute(amx=0x2a87c30, index=22, num_params=0)
+[00:03:22] [INFO] Executing callback 'LoadJobList' with 0 parameter...
+[00:03:22] [DEBUG] executing AMX callback with index '22'
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3758) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1204)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1204)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1206)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1206)
+[00:03:22] [DEBUG] cache_get_value_name(0, "jobname", 0x100AE94C, 33) (userfunction.pwn:1209)
+[00:03:22] [DEBUG] cache_get_value_name: assigned value: '무직' (userfunction.pwn:1209)
+[00:03:22] [DEBUG] cache_get_value_name: return value: '1' (userfunction.pwn:1209)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1206)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1206)
+[00:03:22] [DEBUG] cache_get_value_name(1, "jobname", 0x100AE9D0, 33) (userfunction.pwn:1209)
+[00:03:22] [DEBUG] cache_get_value_name: assigned value: '트럭기사' (userfunction.pwn:1209)
+[00:03:22] [DEBUG] cache_get_value_name: return value: '1' (userfunction.pwn:1209)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1206)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1206)
+[00:03:22] [DEBUG] cache_get_value_name(2, "jobname", 0x100AEA54, 33) (userfunction.pwn:1209)
+[00:03:22] [DEBUG] cache_get_value_name: assigned value: '정비사' (userfunction.pwn:1209)
+[00:03:22] [DEBUG] cache_get_value_name: return value: '1' (userfunction.pwn:1209)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1206)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1206)
+[00:03:22] [DEBUG] cache_get_value_name(3, "jobname", 0x100AEAD8, 33) (userfunction.pwn:1209)
+[00:03:22] [DEBUG] cache_get_value_name: assigned value: '배달부' (userfunction.pwn:1209)
+[00:03:22] [DEBUG] cache_get_value_name: return value: '1' (userfunction.pwn:1209)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1206)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1206)
+[00:03:22] [DEBUG] cache_get_value_name(4, "jobname", 0x100AEB5C, 33) (userfunction.pwn:1209)
+[00:03:22] [DEBUG] cache_get_value_name: assigned value: '건설사 ' (userfunction.pwn:1209)
+[00:03:22] [DEBUG] cache_get_value_name: return value: '1' (userfunction.pwn:1209)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1206)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1206)
+[00:03:22] [DEBUG] cache_get_value_name(5, "jobname", 0x100AEBE0, 33) (userfunction.pwn:1209)
+[00:03:22] [DEBUG] cache_get_value_name: assigned value: '기술 노동자' (userfunction.pwn:1209)
+[00:03:22] [DEBUG] cache_get_value_name: return value: '1' (userfunction.pwn:1209)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1206)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1206)
+[00:03:22] [DEBUG] cache_get_value_name(6, "jobname", 0x100AEC64, 33) (userfunction.pwn:1209)
+[00:03:22] [DEBUG] cache_get_value_name: assigned value: '경찰' (userfunction.pwn:1209)
+[00:03:22] [DEBUG] cache_get_value_name: return value: '1' (userfunction.pwn:1209)
+[00:03:22] [DEBUG] cache_get_row_count(0x128A3750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1206)
+[00:03:22] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1206)
+[00:03:22] [DEBUG] AMX callback executed with error '0'
+[00:03:22] [INFO] Callback successfully executed.
+[00:05:57] [DEBUG] mysql_format(1, 0x128A3560, 128, "SELECT * FROM account WHERE id = '%s'") (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:153)
+[00:05:57] [DEBUG] mysql_format: return value: '51' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:153)
+[00:05:57] [DEBUG] mysql_tquery(1, "SELECT * FROM account WHERE id = 'Gonjals_Bocachio'", "CheckAccount", "i") (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:154)
+[00:05:57] [DEBUG] CCallback::Create(amx=0x2a87c30, name='CheckAccount', format='i', params=0x128a3548, param_offset=5)
+[00:05:57] [DEBUG] CCallback::Create - callback index for 'CheckAccount': 6
+[00:05:57] [DEBUG] processing specifier 'i' with parameter index 0
+[00:05:57] [DEBUG] retrieved and pushed value '0'
+[00:05:57] [INFO] Callback 'CheckAccount' set up for delayed execution.
+[00:05:57] [DEBUG] created delayed callback with 1 parameter
+[00:05:57] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x556170)
+[00:05:57] [DEBUG] CHandle::Execute - return value: true
+[00:05:57] [DEBUG] mysql_tquery: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:154)
+[00:05:57] [DEBUG] CConnection::Execute(query=0x556170, this=0x12c3d020, connection=0x593480)
+[00:05:57] [DEBUG] CQuery::Execute(this=0x556170, connection=0x593480)
+[00:05:57] [INFO] query "SELECT * FROM account WHERE id = 'Gonjals_Bocachio'" successfully executed within 31.567 milliseconds
+[00:05:57] [DEBUG] CResultSet::Create(connection=0x593480, query_str='SELECT * FROM account WHERE id = 'Gonjals_Bocachio'')
+[00:05:57] [DEBUG] created new resultset '0x5ae300'
+[00:05:57] [DEBUG] fetched MySQL result '0x54f158'
+[00:05:57] [DEBUG] allocated 68 bytes for PAWN result
+[00:05:57] [DEBUG] CCallback::Execute(amx=0x2a87c30, index=6, num_params=1)
+[00:05:57] [INFO] Executing callback 'CheckAccount' with 1 parameter...
+[00:05:57] [DEBUG] processing internal specifier 'c'
+[00:05:57] [DEBUG] pushed value '0' onto AMX stack
+[00:05:57] [DEBUG] executing AMX callback with index '6'
+[00:05:57] [DEBUG] cache_get_row_count(0x128A3554) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:782)
+[00:05:57] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:782)
+[00:05:57] [DEBUG] cache_get_value_name(0, "password", 0x0FCA0F7C, 60) (userfunction.pwn:787)
+[00:05:57] [DEBUG] cache_get_value_name: assigned value: '7721f5bd58b1c74c7502f82c9ec55693' (userfunction.pwn:787)
+[00:05:57] [DEBUG] cache_get_value_name: return value: '1' (userfunction.pwn:787)
+[00:05:57] [DEBUG] mysql_format(1, 0x128A3354, 128, "SELECT * FROM information WHERE EXISTS (SELECT * FROM account WHERE information.id = '%s');") (userfunction.pwn:1075 -> userfunction.pwn:790)
+[00:05:57] [DEBUG] mysql_format: return value: '105' (userfunction.pwn:1075 -> userfunction.pwn:790)
+[00:05:57] [DEBUG] mysql_tquery(1, "SELECT * FROM information WHERE EXISTS (SELECT * FROM account WHERE information.id = 'Gonjals_Bocachio');", "LoadUserData", "d") (userfunction.pwn:1076 -> userfunction.pwn:790)
+[00:05:57] [DEBUG] CCallback::Create(amx=0x2a87c30, name='LoadUserData', format='d', params=0x128a333c, param_offset=5)
+[00:05:57] [DEBUG] CCallback::Create - callback index for 'LoadUserData': 28
+[00:05:57] [DEBUG] processing specifier 'd' with parameter index 0
+[00:05:57] [DEBUG] retrieved and pushed value '0'
+[00:05:57] [INFO] Callback 'LoadUserData' set up for delayed execution.
+[00:05:57] [DEBUG] created delayed callback with 1 parameter
+[00:05:57] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x5559b8)
+[00:05:57] [DEBUG] CHandle::Execute - return value: true
+[00:05:57] [DEBUG] mysql_tquery: return value: '1' (userfunction.pwn:1076 -> userfunction.pwn:790)
+[00:05:57] [DEBUG] CConnection::Execute(query=0x5559b8, this=0x12c3d020, connection=0x593480)
+[00:05:57] [DEBUG] CQuery::Execute(this=0x5559b8, connection=0x593480)
+[00:05:57] [DEBUG] mysql_format(1, 0x128A3354, 128, "SELECT * FROM locationtime WHERE EXISTS (SELECT * FROM account WHERE locationtime.id = '%s');") (userfunction.pwn:1051 -> userfunction.pwn:791)
+[00:05:57] [DEBUG] mysql_format: return value: '107' (userfunction.pwn:1051 -> userfunction.pwn:791)
+[00:05:57] [DEBUG] mysql_tquery(1, "SELECT * FROM locationtime WHERE EXISTS (SELECT * FROM account WHERE locationtime.id = 'Gonjals_Bocachio');", "LoadUserLocationData", "d") (userfunction.pwn:1052 -> userfunction.pwn:791)
+[00:05:57] [DEBUG] CCallback::Create(amx=0x2a87c30, name='LoadUserLocationData', format='d', params=0x128a333c, param_offset=5)
+[00:05:57] [DEBUG] CCallback::Create - callback index for 'LoadUserLocationData': 29
+[00:05:57] [DEBUG] processing specifier 'd' with parameter index 0
+[00:05:57] [DEBUG] retrieved and pushed value '0'
+[00:05:57] [INFO] Callback 'LoadUserLocationData' set up for delayed execution.
+[00:05:57] [DEBUG] created delayed callback with 1 parameter
+[00:05:57] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x555a50)
+[00:05:57] [DEBUG] CHandle::Execute - return value: true
+[00:05:57] [DEBUG] mysql_tquery: return value: '1' (userfunction.pwn:1052 -> userfunction.pwn:791)
+[00:05:57] [DEBUG] mysql_format(1, 0x128A3354, 128, "SELECT * FROM status WHERE EXISTS (SELECT * FROM account WHERE status.id = '%s');") (userfunction.pwn:1033 -> userfunction.pwn:792)
+[00:05:57] [DEBUG] mysql_format: return value: '95' (userfunction.pwn:1033 -> userfunction.pwn:792)
+[00:05:57] [DEBUG] mysql_tquery(1, "SELECT * FROM status WHERE EXISTS (SELECT * FROM account WHERE status.id = 'Gonjals_Bocachio');", "LoadUserStatusData", "d") (userfunction.pwn:1034 -> userfunction.pwn:792)
+[00:05:57] [DEBUG] CCallback::Create(amx=0x2a87c30, name='LoadUserStatusData', format='d', params=0x128a333c, param_offset=5)
+[00:05:57] [DEBUG] CCallback::Create - callback index for 'LoadUserStatusData': 32
+[00:05:57] [DEBUG] processing specifier 'd' with parameter index 0
+[00:05:57] [DEBUG] retrieved and pushed value '0'
+[00:05:57] [INFO] Callback 'LoadUserStatusData' set up for delayed execution.
+[00:05:57] [DEBUG] created delayed callback with 1 parameter
+[00:05:57] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x555de0)
+[00:05:57] [DEBUG] CHandle::Execute - return value: true
+[00:05:57] [DEBUG] mysql_tquery: return value: '1' (userfunction.pwn:1034 -> userfunction.pwn:792)
+[00:05:57] [DEBUG] mysql_format(1, 0x128A3154, 256, "SELECT * FROM `accessories` WHERE id = '%s'AND posX > 0.00001 AND (index_ = 0 OR index_ = 1 OR index_ = 2 OR index_ = 3) IS NOT NULL ORDER BY index_ ASC;") (userfunction.pwn:928 -> userfunction.pwn:793)
+[00:05:57] [DEBUG] mysql_format: return value: '167' (userfunction.pwn:928 -> userfunction.pwn:793)
+[00:05:57] [DEBUG] mysql_tquery(1, "SELECT * FROM `accessories` WHERE id = 'Gonjals_Bocachio'AND posX > 0.00001 AND (index_ = 0 OR index_ = 1 OR index_ = 2 OR index_ = 3) IS NOT NULL ORDER BY index_ ASC;", "LoadUserAccData", "i") (userfunction.pwn:930 -> userfunction.pwn:793)
+[00:05:57] [DEBUG] CCallback::Create(amx=0x2a87c30, name='LoadUserAccData', format='i', params=0x128a313c, param_offset=5)
+[00:05:57] [DEBUG] CCallback::Create - callback index for 'LoadUserAccData': 25
+[00:05:57] [DEBUG] processing specifier 'i' with parameter index 0
+[00:05:57] [DEBUG] retrieved and pushed value '0'
+[00:05:57] [INFO] Callback 'LoadUserAccData' set up for delayed execution.
+[00:05:57] [DEBUG] created delayed callback with 1 parameter
+[00:05:57] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x5562a0)
+[00:05:57] [DEBUG] CHandle::Execute - return value: true
+[00:05:57] [DEBUG] mysql_tquery: return value: '1' (userfunction.pwn:930 -> userfunction.pwn:793)
+[00:05:57] [DEBUG] mysql_format(1, 0x128A3354, 128, "SELECT * FROM bank where id = '%s';") (userfunction.pwn:1191 -> userfunction.pwn:794)
+[00:05:57] [DEBUG] mysql_format: return value: '49' (userfunction.pwn:1191 -> userfunction.pwn:794)
+[00:05:57] [DEBUG] mysql_tquery(1, "SELECT * FROM bank where id = 'Gonjals_Bocachio';", "LoadUserBankData", "i") (userfunction.pwn:1192 -> userfunction.pwn:794)
+[00:05:57] [DEBUG] CCallback::Create(amx=0x2a87c30, name='LoadUserBankData', format='i', params=0x128a333c, param_offset=5)
+[00:05:57] [DEBUG] CCallback::Create - callback index for 'LoadUserBankData': 27
+[00:05:57] [DEBUG] processing specifier 'i' with parameter index 0
+[00:05:57] [DEBUG] retrieved and pushed value '0'
+[00:05:57] [INFO] Callback 'LoadUserBankData' set up for delayed execution.
+[00:05:57] [DEBUG] created delayed callback with 1 parameter
+[00:05:57] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x5563d0)
+[00:05:57] [DEBUG] CHandle::Execute - return value: true
+[00:05:57] [DEBUG] mysql_tquery: return value: '1' (userfunction.pwn:1192 -> userfunction.pwn:794)
+[00:05:57] [DEBUG] AMX callback executed with error '0'
+[00:05:57] [INFO] Callback successfully executed.
+[00:05:57] [INFO] query "SELECT * FROM information WHERE EXISTS (SELECT * FROM account WHERE information.id = 'Gonjals_Bocachio');" successfully executed within 26.521 milliseconds
+[00:05:57] [DEBUG] CResultSet::Create(connection=0x593480, query_str='SELECT * FROM information WHERE EXISTS (SELECT * FROM account WHERE information.id = 'Gonjals_Bocachio');')
+[00:05:57] [DEBUG] created new resultset '0x5ae300'
+[00:05:57] [DEBUG] fetched MySQL result '0x56cfe0'
+[00:05:57] [DEBUG] allocated 92 bytes for PAWN result
+[00:05:57] [DEBUG] CConnection::Execute(query=0x555a50, this=0x12c3d020, connection=0x593480)
+[00:05:57] [DEBUG] CQuery::Execute(this=0x555a50, connection=0x593480)
+[00:05:57] [DEBUG] CCallback::Execute(amx=0x2a87c30, index=28, num_params=1)
+[00:05:57] [INFO] Executing callback 'LoadUserData' with 1 parameter...
+[00:05:57] [DEBUG] processing internal specifier 'c'
+[00:05:57] [DEBUG] pushed value '0' onto AMX stack
+[00:05:57] [DEBUG] executing AMX callback with index '28'
+[00:05:57] [DEBUG] cache_get_row_count(0x128A3754) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1079)
+[00:05:57] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1079)
+[00:05:57] [DEBUG] cache_get_value_name_int(0, "tutorial", 0x0FCA1084) (userfunction.pwn:1081)
+[00:05:57] [DEBUG] cache_get_value_name_int: assigned value: '1' (userfunction.pwn:1081)
+[00:05:57] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1081)
+[00:05:57] [DEBUG] cache_get_value_name_int(0, "skin", 0x0FCA1074) (userfunction.pwn:1082)
+[00:05:57] [DEBUG] cache_get_value_name_int: assigned value: '25' (userfunction.pwn:1082)
+[00:05:57] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1082)
+[00:05:57] [DEBUG] cache_get_value_name_int(0, "sex", 0x0FCA1070) (userfunction.pwn:1083)
+[00:05:57] [DEBUG] cache_get_value_name_int: assigned value: '0' (userfunction.pwn:1083)
+[00:05:57] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1083)
+[00:05:57] [DEBUG] cache_get_value_name_int(0, "age", 0x0FCA108C) (userfunction.pwn:1084)
+[00:05:57] [DEBUG] cache_get_value_name_int: assigned value: '1995' (userfunction.pwn:1084)
+[00:05:57] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1084)
+[00:05:57] [DEBUG] cache_get_value_name_int(0, "phoneNum", 0x0FCA1090) (userfunction.pwn:1085)
+[00:05:57] [DEBUG] cache_get_value_name_int: assigned value: '30353887' (userfunction.pwn:1085)
+[00:05:57] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1085)
+[00:05:57] [DEBUG] cache_get_value_name_int(0, "job", 0x0FCA1078) (userfunction.pwn:1086)
+[00:05:57] [DEBUG] cache_get_value_name_int: assigned value: '1' (userfunction.pwn:1086)
+[00:05:57] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1086)
+[00:05:57] [DEBUG] cache_get_value_name_int(0, "frequency", 0x0FCA18C0) (userfunction.pwn:1087)
+[00:05:57] [DEBUG] cache_get_value_name_int: assigned value: '-1' (userfunction.pwn:1087)
+[00:05:57] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1087)
+[00:05:57] [DEBUG] cache_get_value_name_int(0, "freqSound", 0x0FCA18C4) (userfunction.pwn:1088)
+[00:05:57] [DEBUG] cache_get_value_name_int: assigned value: '-1' (userfunction.pwn:1088)
+[00:05:57] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1088)
+[00:05:57] [DEBUG] mysql_format(1, 0x128A3354, 256, "SELECT * FROM items WHERE id = '%s';") (userfunction.pwn:70 -> userfunction.pwn:1091)
+[00:05:57] [DEBUG] mysql_format: return value: '50' (userfunction.pwn:70 -> userfunction.pwn:1091)
+[00:05:57] [DEBUG] mysql_tquery(1, "SELECT * FROM items WHERE id = 'Gonjals_Bocachio';", "LoadPlayerItem", "") (userfunction.pwn:71 -> userfunction.pwn:1091)
+[00:05:57] [DEBUG] CCallback::Create(amx=0x2a87c30, name='LoadPlayerItem', format='', params=0x128a3340, param_offset=5)
+[00:05:57] [DEBUG] CCallback::Create - callback index for 'LoadPlayerItem': 24
+[00:05:57] [INFO] Callback 'LoadPlayerItem' set up for delayed execution.
+[00:05:57] [DEBUG] created delayed callback with 0 parameter
+[00:05:57] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x5557f0)
+[00:05:57] [DEBUG] CHandle::Execute - return value: true
+[00:05:57] [DEBUG] mysql_tquery: return value: '1' (userfunction.pwn:71 -> userfunction.pwn:1091)
+[00:05:57] [DEBUG] AMX callback executed with error '0'
+[00:05:57] [INFO] Callback successfully executed.
+[00:05:57] [INFO] query "SELECT * FROM locationtime WHERE EXISTS (SELECT * FROM account WHERE locationtime.id = 'Gonjals_Bocachio');" successfully executed within 25.291 milliseconds
+[00:05:57] [DEBUG] CResultSet::Create(connection=0x593480, query_str='SELECT * FROM locationtime WHERE EXISTS (SELECT * FROM account WHERE locationtime.id = 'Gonjals_Bocachio');')
+[00:05:57] [DEBUG] created new resultset '0x5b9790'
+[00:05:57] [DEBUG] fetched MySQL result '0x56c7e0'
+[00:05:57] [DEBUG] allocated 100 bytes for PAWN result
+[00:05:57] [DEBUG] CConnection::Execute(query=0x555de0, this=0x12c3d020, connection=0x593480)
+[00:05:57] [DEBUG] CQuery::Execute(this=0x555de0, connection=0x593480)
+[00:05:57] [DEBUG] CCallback::Execute(amx=0x2a87c30, index=29, num_params=1)
+[00:05:57] [INFO] Executing callback 'LoadUserLocationData' with 1 parameter...
+[00:05:57] [DEBUG] processing internal specifier 'c'
+[00:05:57] [DEBUG] pushed value '0' onto AMX stack
+[00:05:57] [DEBUG] executing AMX callback with index '29'
+[00:05:57] [DEBUG] cache_get_row_count(0x128A3754) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1059)
+[00:05:57] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1059)
+[00:05:57] [DEBUG] cache_get_value_name_int(0, "interior", 0x0FCA109C) (userfunction.pwn:1061)
+[00:05:57] [DEBUG] cache_get_value_name_int: assigned value: '0' (userfunction.pwn:1061)
+[00:05:57] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1061)
+[00:05:57] [DEBUG] cache_get_value_name_int(0, "virtualworld", 0x0FCA189C) (userfunction.pwn:1062)
+[00:05:57] [DEBUG] cache_get_value_name_int: assigned value: '0' (userfunction.pwn:1062)
+[00:05:57] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1062)
+[00:05:57] [DEBUG] cache_get_value_name_float(0, "posX", 0x0FCA1960) (userfunction.pwn:1063)
+[00:05:57] [DEBUG] cache_get_value_name_float: assigned value: '1537.55' (userfunction.pwn:1063)
+[00:05:57] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1063)
+[00:05:57] [DEBUG] cache_get_value_name_float(0, "posY", 0x0FCA1964) (userfunction.pwn:1064)
+[00:05:57] [DEBUG] cache_get_value_name_float: assigned value: '-1677.57' (userfunction.pwn:1064)
+[00:05:57] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1064)
+[00:05:57] [DEBUG] cache_get_value_name_float(0, "posZ", 0x0FCA1968) (userfunction.pwn:1065)
+[00:05:57] [DEBUG] cache_get_value_name_float: assigned value: '13.5469' (userfunction.pwn:1065)
+[00:05:57] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1065)
+[00:05:57] [DEBUG] cache_get_value_name_int(0, "hour", 0x0FCA196C) (userfunction.pwn:1066)
+[00:05:57] [DEBUG] cache_get_value_name_int: assigned value: '1' (userfunction.pwn:1066)
+[00:05:57] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1066)
+[00:05:57] [DEBUG] cache_get_value_name_int(0, "minute", 0x0FCA1970) (userfunction.pwn:1067)
+[00:05:57] [DEBUG] cache_get_value_name_int: assigned value: '46' (userfunction.pwn:1067)
+[00:05:57] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1067)
+[00:05:57] [DEBUG] cache_get_value_name_int(0, "second", 0x0FCA1974) (userfunction.pwn:1068)
+[00:05:57] [DEBUG] cache_get_value_name_int: assigned value: '23' (userfunction.pwn:1068)
+[00:05:57] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1068)
+[00:05:57] [DEBUG] AMX callback executed with error '0'
+[00:05:57] [INFO] Callback successfully executed.
+[00:05:57] [INFO] query "SELECT * FROM status WHERE EXISTS (SELECT * FROM account WHERE status.id = 'Gonjals_Bocachio');" successfully executed within 27.50 milliseconds
+[00:05:57] [DEBUG] CResultSet::Create(connection=0x593480, query_str='SELECT * FROM status WHERE EXISTS (SELECT * FROM account WHERE status.id = 'Gonjals_Bocachio');')
+[00:05:57] [DEBUG] created new resultset '0x5bc900'
+[00:05:57] [DEBUG] fetched MySQL result '0x5b35a0'
+[00:05:57] [DEBUG] allocated 44 bytes for PAWN result
+[00:05:57] [DEBUG] CConnection::Execute(query=0x5562a0, this=0x12c3d020, connection=0x593480)
+[00:05:57] [DEBUG] CQuery::Execute(this=0x5562a0, connection=0x593480)
+[00:05:58] [DEBUG] CCallback::Execute(amx=0x2a87c30, index=32, num_params=1)
+[00:05:58] [INFO] Executing callback 'LoadUserStatusData' with 1 parameter...
+[00:05:58] [DEBUG] processing internal specifier 'c'
+[00:05:58] [DEBUG] pushed value '0' onto AMX stack
+[00:05:58] [DEBUG] executing AMX callback with index '32'
+[00:05:58] [DEBUG] cache_get_row_count(0x128A3754) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1041)
+[00:05:58] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1041)
+[00:05:58] [DEBUG] cache_get_value_name_float(0, "health", 0x0FCA1958) (userfunction.pwn:1043)
+[00:05:58] [DEBUG] cache_get_value_name_float: assigned value: '148' (userfunction.pwn:1043)
+[00:05:58] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1043)
+[00:05:58] [DEBUG] cache_get_value_name_float(0, "armour", 0x0FCA195C) (userfunction.pwn:1044)
+[00:05:58] [DEBUG] cache_get_value_name_float: assigned value: '0' (userfunction.pwn:1044)
+[00:05:58] [DEBUG] cache_get_value_name_float: return value: '1' (userfunction.pwn:1044)
+[00:05:58] [DEBUG] AMX callback executed with error '0'
+[00:05:58] [INFO] Callback successfully executed.
+[00:05:58] [INFO] query "SELECT * FROM `accessories` WHERE id = 'Gonjals_Bocachio'AND posX > 0.00001 AND (index_ = 0 OR index_ = 1 OR index_ = 2 OR index_ = 3) IS NOT NULL ORDER BY index_ ASC;" successfully executed within 24.780 milliseconds
+[00:05:58] [DEBUG] CResultSet::Create(connection=0x593480, query_str='SELECT * FROM `accessories` WHERE id = 'Gonjals_Bocachio'AND posX > 0.00001 AND (index_ = 0 OR index_ = 1 OR index_ = 2 OR index_ = 3) IS NOT NULL ORDER BY index_ ASC;')
+[00:05:58] [DEBUG] created new resultset '0x5bc778'
+[00:05:58] [DEBUG] fetched MySQL result '0x59a368'
+[00:05:58] [DEBUG] allocated 0 bytes for PAWN result
+[00:05:58] [DEBUG] CConnection::Execute(query=0x5563d0, this=0x12c3d020, connection=0x593480)
+[00:05:58] [DEBUG] CQuery::Execute(this=0x5563d0, connection=0x593480)
+[00:05:58] [DEBUG] CCallback::Execute(amx=0x2a87c30, index=25, num_params=1)
+[00:05:58] [INFO] Executing callback 'LoadUserAccData' with 1 parameter...
+[00:05:58] [DEBUG] processing internal specifier 'c'
+[00:05:58] [DEBUG] pushed value '0' onto AMX stack
+[00:05:58] [DEBUG] executing AMX callback with index '25'
+[00:05:58] [DEBUG] cache_get_row_count(0x128A374C) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:933)
+[00:05:58] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:933)
+[00:05:58] [DEBUG] AMX callback executed with error '0'
+[00:05:58] [INFO] Callback successfully executed.
+[00:05:58] [INFO] query "SELECT * FROM bank where id = 'Gonjals_Bocachio';" successfully executed within 20.747 milliseconds
+[00:05:58] [DEBUG] CResultSet::Create(connection=0x593480, query_str='SELECT * FROM bank where id = 'Gonjals_Bocachio';')
+[00:05:58] [DEBUG] created new resultset '0x5ae808'
+[00:05:58] [DEBUG] fetched MySQL result '0x588590'
+[00:05:58] [DEBUG] allocated 68 bytes for PAWN result
+[00:05:58] [DEBUG] CConnection::Execute(query=0x5557f0, this=0x12c3d020, connection=0x593480)
+[00:05:58] [DEBUG] CQuery::Execute(this=0x5557f0, connection=0x593480)
+[00:05:58] [DEBUG] CCallback::Execute(amx=0x2a87c30, index=27, num_params=1)
+[00:05:58] [INFO] Executing callback 'LoadUserBankData' with 1 parameter...
+[00:05:58] [DEBUG] processing internal specifier 'c'
+[00:05:58] [DEBUG] pushed value '0' onto AMX stack
+[00:05:58] [DEBUG] executing AMX callback with index '27'
+[00:05:58] [DEBUG] cache_get_row_count(0x128A3754) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1195)
+[00:05:58] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:1195)
+[00:05:58] [DEBUG] cache_get_value_name_int(0, "money", 0x0FCA1094) (userfunction.pwn:1198)
+[00:05:58] [DEBUG] cache_get_value_name_int: assigned value: '95000' (userfunction.pwn:1198)
+[00:05:58] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1198)
+[00:05:58] [DEBUG] cache_get_value_name_int(0, "account", 0x0FCA1098) (userfunction.pwn:1199)
+[00:05:58] [DEBUG] cache_get_value_name_int: assigned value: '0' (userfunction.pwn:1199)
+[00:05:58] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:1199)
+[00:05:58] [DEBUG] AMX callback executed with error '0'
+[00:05:58] [INFO] Callback successfully executed.
+[00:05:58] [INFO] query "SELECT * FROM items WHERE id = 'Gonjals_Bocachio';" successfully executed within 19.277 milliseconds
+[00:05:58] [DEBUG] CResultSet::Create(connection=0x593480, query_str='SELECT * FROM items WHERE id = 'Gonjals_Bocachio';')
+[00:05:58] [DEBUG] created new resultset '0x5c0a90'
+[00:05:58] [DEBUG] fetched MySQL result '0x5b3878'
+[00:05:58] [DEBUG] allocated 60 bytes for PAWN result
+[00:05:58] [DEBUG] CCallback::Execute(amx=0x2a87c30, index=24, num_params=0)
+[00:05:58] [INFO] Executing callback 'LoadPlayerItem' with 0 parameter...
+[00:05:58] [DEBUG] executing AMX callback with index '24'
+[00:05:58] [DEBUG] cache_get_row_count(0x128A32D4) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:77)
+[00:05:58] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:77)
+[00:05:58] [DEBUG] cache_get_value_name(0, "itemName", 0x128A36F0, 30) (userfunction.pwn:80)
+[00:05:58] [DEBUG] cache_get_value_name: assigned value: '붐박스/오디오' (userfunction.pwn:80)
+[00:05:58] [DEBUG] cache_get_value_name: return value: '1' (userfunction.pwn:80)
+[00:05:58] [DEBUG] cache_get_value_name_int(0, "count", 0x128A36EC) (userfunction.pwn:81)
+[00:05:58] [DEBUG] cache_get_value_name_int: assigned value: '1' (userfunction.pwn:81)
+[00:05:58] [DEBUG] cache_get_value_name_int: return value: '1' (userfunction.pwn:81)
+[00:05:58] [DEBUG] cache_get_row_count(0x128A32D4) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:77)
+[00:05:58] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:77)
+[00:05:58] [DEBUG] mysql_format(1, 0x128A32EC, 256, "DELETE FROM `items` WHERE id = '%s';") (userfunction.pwn:84)
+[00:05:58] [DEBUG] mysql_format: return value: '50' (userfunction.pwn:84)
+[00:05:58] [DEBUG] mysql_tquery(1, "DELETE FROM `items` WHERE id = 'Gonjals_Bocachio';", "", "") (userfunction.pwn:85)
+[00:05:58] [DEBUG] CCallback::Create(amx=0x2a87c30, name='', format='', params=0x128a32d8, param_offset=5)
+[00:05:58] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x555d48)
+[00:05:58] [DEBUG] CHandle::Execute - return value: true
+[00:05:58] [DEBUG] mysql_tquery: return value: '1' (userfunction.pwn:85)
+[00:05:58] [DEBUG] AMX callback executed with error '0'
+[00:05:58] [INFO] Callback successfully executed.
+[00:05:58] [DEBUG] CConnection::Execute(query=0x555d48, this=0x12c3d020, connection=0x593480)
+[00:05:58] [DEBUG] CQuery::Execute(this=0x555d48, connection=0x593480)
+[00:05:58] [INFO] query "DELETE FROM `items` WHERE id = 'Gonjals_Bocachio';" successfully executed within 14.528 milliseconds
+[00:05:58] [DEBUG] CResultSet::Create(connection=0x593480, query_str='DELETE FROM `items` WHERE id = 'Gonjals_Bocachio';')
+[00:05:58] [DEBUG] created new resultset '0x5c0a90'
+[00:05:58] [DEBUG] fetched MySQL result '0x0'
+[00:08:16] [DEBUG] mysql_format(1, 0x128A3120, 256, "UPDATE vehicle SET vHealth=%f, X=%f,Y=%f,Z=%f,vAngle=%f,vFuel=%d WHERE id = '%s'") (userfunction.pwn:523 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:813)
+[00:08:16] [DEBUG] mysql_format: return value: '139' (userfunction.pwn:523 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:813)
+[00:08:16] [DEBUG] mysql_tquery(1, "UPDATE vehicle SET vHealth=1000.000000, X=1342.703247,Y=-1753.814331,Z=13.061089,vAngle=177.916183,vFuel=1710 WHERE id = 'Gonjals_Bocachio'", "", "") (userfunction.pwn:524 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:813)
+[00:08:16] [DEBUG] CCallback::Create(amx=0x2a87c30, name='', format='', params=0x128a310c, param_offset=5)
+[00:08:16] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x555cb0)
+[00:08:16] [DEBUG] CHandle::Execute - return value: true
+[00:08:16] [DEBUG] mysql_tquery: return value: '1' (userfunction.pwn:524 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:813)
+[00:08:16] [DEBUG] CConnection::Execute(query=0x555cb0, this=0x12c3d020, connection=0x593480)
+[00:08:16] [DEBUG] CQuery::Execute(this=0x555cb0, connection=0x593480)
+[00:08:16] [INFO] query "UPDATE vehicle SET vHealth=1000.000000, X=1342.703247,Y=-1753.814331,Z=13.061089,vAngle=177.916183,vFuel=1710 WHERE id = 'Gonjals_Bocachio'" successfully executed within 16.744 milliseconds
+[00:08:17] [DEBUG] CResultSet::Create(connection=0x593480, query_str='UPDATE vehicle SET vHealth=1000.000000, X=1342.703247,Y=-1753.814331,Z=13.061089,vAngle=177.916183,vFuel=1710 WHERE id = 'Gonjals_Bocachio'')
+[00:08:17] [DEBUG] created new resultset '0x5ae610'
+[00:08:17] [DEBUG] fetched MySQL result '0x0'
+[00:08:17] [DEBUG] mysql_format(1, 0x128A334C, 256, "UPDATE vehicle SET vHealth=%f, X=%f,Y=%f,Z=%f,vAngle=%f,vFuel=%d WHERE id = '%s'") (userfunction.pwn:523 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:2076)
+[00:08:17] [DEBUG] mysql_format: return value: '139' (userfunction.pwn:523 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:2076)
+[00:08:17] [DEBUG] mysql_tquery(1, "UPDATE vehicle SET vHealth=1000.000000, X=1342.703247,Y=-1753.814331,Z=13.061089,vAngle=177.916183,vFuel=1710 WHERE id = 'Gonjals_Bocachio'", "", "") (userfunction.pwn:524 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:2076)
+[00:08:17] [DEBUG] CCallback::Create(amx=0x2a87c30, name='', format='', params=0x128a3338, param_offset=5)
+[00:08:17] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x5559b8)
+[00:08:17] [DEBUG] CHandle::Execute - return value: true
+[00:08:17] [DEBUG] mysql_tquery: return value: '1' (userfunction.pwn:524 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:2076)
+[00:08:17] [DEBUG] CConnection::Execute(query=0x5559b8, this=0x12c3d020, connection=0x593480)
+[00:08:17] [DEBUG] CQuery::Execute(this=0x5559b8, connection=0x593480)
+[00:08:17] [INFO] query "UPDATE vehicle SET vHealth=1000.000000, X=1342.703247,Y=-1753.814331,Z=13.061089,vAngle=177.916183,vFuel=1710 WHERE id = 'Gonjals_Bocachio'" successfully executed within 15.7 milliseconds
+[00:08:17] [DEBUG] CResultSet::Create(connection=0x593480, query_str='UPDATE vehicle SET vHealth=1000.000000, X=1342.703247,Y=-1753.814331,Z=13.061089,vAngle=177.916183,vFuel=1710 WHERE id = 'Gonjals_Bocachio'')
+[00:08:17] [DEBUG] created new resultset '0x5ae798'
+[00:08:17] [DEBUG] fetched MySQL result '0x0'
+[00:08:39] [DEBUG] mysql_format(1, 0x128A3330, 256, "SELECT * FROM boombox WHERE id = '%s';") (userfunction.pwn:2041 -> userfunction.pwn:1902 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:744)
+[00:08:39] [DEBUG] mysql_format: return value: '52' (userfunction.pwn:2041 -> userfunction.pwn:1902 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:744)
+[00:08:39] [DEBUG] mysql_tquery(1, "SELECT * FROM boombox WHERE id = 'Gonjals_Bocachio';", "LoadAudioInfo", "") (userfunction.pwn:2042 -> userfunction.pwn:1902 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:744)
+[00:08:39] [DEBUG] CCallback::Create(amx=0x2a87c30, name='LoadAudioInfo', format='', params=0x128a331c, param_offset=5)
+[00:08:39] [DEBUG] CCallback::Create - callback index for 'LoadAudioInfo': 19
+[00:08:39] [INFO] Callback 'LoadAudioInfo' set up for delayed execution.
+[00:08:39] [DEBUG] created delayed callback with 0 parameter
+[00:08:39] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x5557f0)
+[00:08:39] [DEBUG] CHandle::Execute - return value: true
+[00:08:39] [DEBUG] mysql_tquery: return value: '1' (userfunction.pwn:2042 -> userfunction.pwn:1902 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:744)
+[00:08:39] [DEBUG] CConnection::Execute(query=0x5557f0, this=0x12c3d020, connection=0x593480)
+[00:08:39] [DEBUG] CQuery::Execute(this=0x5557f0, connection=0x593480)
+[00:08:39] [INFO] query "SELECT * FROM boombox WHERE id = 'Gonjals_Bocachio';" successfully executed within 27.41 milliseconds
+[00:08:39] [DEBUG] CResultSet::Create(connection=0x593480, query_str='SELECT * FROM boombox WHERE id = 'Gonjals_Bocachio';')
+[00:08:39] [DEBUG] created new resultset '0x5ae300'
+[00:08:39] [DEBUG] fetched MySQL result '0x54eaf8'
+[00:08:39] [DEBUG] allocated 152 bytes for PAWN result
+[00:08:39] [DEBUG] CCallback::Execute(amx=0x2a87c30, index=19, num_params=0)
+[00:08:39] [INFO] Executing callback 'LoadAudioInfo' with 0 parameter...
+[00:08:39] [DEBUG] executing AMX callback with index '19'
+[00:08:39] [DEBUG] cache_get_row_count(0x1289F750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:2049)
+[00:08:39] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:2049)
+[00:08:39] [DEBUG] cache_get_value_name(0, "list", 0x128A1768, 2048) (userfunction.pwn:2052)
+[00:08:39] [DEBUG] cache_get_value_name: assigned value: 'https://media.bgmstore.net/mp3/kknJa.mp3' (userfunction.pwn:2052)
+[00:08:39] [DEBUG] cache_get_value_name: return value: '1' (userfunction.pwn:2052)
+[00:08:39] [DEBUG] cache_get_row_count(0x1289F750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:2049)
+[00:08:39] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:2049)
+[00:08:39] [DEBUG] cache_get_value_name(1, "list", 0x128A1768, 2048) (userfunction.pwn:2052)
+[00:08:39] [DEBUG] cache_get_value_name: assigned value: 'https://media1.bgmstore.net/mp3/6vroU.mp3' (userfunction.pwn:2052)
+[00:08:39] [DEBUG] cache_get_value_name: return value: '1' (userfunction.pwn:2052)
+[00:08:39] [DEBUG] cache_get_row_count(0x1289F750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:2049)
+[00:08:39] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:2049)
+[00:08:39] [DEBUG] AMX callback executed with error '0'
+[00:08:39] [INFO] Callback successfully executed.
+[00:08:48] [DEBUG] mysql_format(1, 0x128A3330, 256, "SELECT * FROM boombox WHERE id = '%s';") (userfunction.pwn:2041 -> userfunction.pwn:1902 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:744)
+[00:08:48] [DEBUG] mysql_format: return value: '52' (userfunction.pwn:2041 -> userfunction.pwn:1902 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:744)
+[00:08:48] [DEBUG] mysql_tquery(1, "SELECT * FROM boombox WHERE id = 'Gonjals_Bocachio';", "LoadAudioInfo", "") (userfunction.pwn:2042 -> userfunction.pwn:1902 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:744)
+[00:08:48] [DEBUG] CCallback::Create(amx=0x2a87c30, name='LoadAudioInfo', format='', params=0x128a331c, param_offset=5)
+[00:08:48] [DEBUG] CCallback::Create - callback index for 'LoadAudioInfo': 19
+[00:08:48] [INFO] Callback 'LoadAudioInfo' set up for delayed execution.
+[00:08:48] [DEBUG] created delayed callback with 0 parameter
+[00:08:48] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x5562a0)
+[00:08:48] [DEBUG] CHandle::Execute - return value: true
+[00:08:48] [DEBUG] mysql_tquery: return value: '1' (userfunction.pwn:2042 -> userfunction.pwn:1902 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:744)
+[00:08:48] [DEBUG] CConnection::Execute(query=0x5562a0, this=0x12c3d020, connection=0x593480)
+[00:08:48] [DEBUG] CQuery::Execute(this=0x5562a0, connection=0x593480)
+[00:08:48] [INFO] query "SELECT * FROM boombox WHERE id = 'Gonjals_Bocachio';" successfully executed within 15.170 milliseconds
+[00:08:48] [DEBUG] CResultSet::Create(connection=0x593480, query_str='SELECT * FROM boombox WHERE id = 'Gonjals_Bocachio';')
+[00:08:48] [DEBUG] created new resultset '0x5ae4c0'
+[00:08:48] [DEBUG] fetched MySQL result '0x54eeb8'
+[00:08:48] [DEBUG] allocated 152 bytes for PAWN result
+[00:08:48] [DEBUG] CCallback::Execute(amx=0x2a87c30, index=19, num_params=0)
+[00:08:48] [INFO] Executing callback 'LoadAudioInfo' with 0 parameter...
+[00:08:48] [DEBUG] executing AMX callback with index '19'
+[00:08:48] [DEBUG] cache_get_row_count(0x1289F750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:2049)
+[00:08:48] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:2049)
+[00:08:48] [DEBUG] cache_get_value_name(0, "list", 0x128A1768, 2048) (userfunction.pwn:2052)
+[00:08:48] [DEBUG] cache_get_value_name: assigned value: 'https://media.bgmstore.net/mp3/kknJa.mp3' (userfunction.pwn:2052)
+[00:08:48] [DEBUG] cache_get_value_name: return value: '1' (userfunction.pwn:2052)
+[00:08:48] [DEBUG] cache_get_row_count(0x1289F750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:2049)
+[00:08:48] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:2049)
+[00:08:48] [DEBUG] cache_get_value_name(1, "list", 0x128A1768, 2048) (userfunction.pwn:2052)
+[00:08:48] [DEBUG] cache_get_value_name: assigned value: 'https://media1.bgmstore.net/mp3/6vroU.mp3' (userfunction.pwn:2052)
+[00:08:48] [DEBUG] cache_get_value_name: return value: '1' (userfunction.pwn:2052)
+[00:08:48] [DEBUG] cache_get_row_count(0x1289F750) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:2049)
+[00:08:48] [DEBUG] cache_get_row_count: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\a_mysql.inc:182 -> userfunction.pwn:2049)
+[00:08:48] [DEBUG] AMX callback executed with error '0'
+[00:08:48] [INFO] Callback successfully executed.
+[00:08:59] [DEBUG] mysql_format(1, 0x128A30F0, 256, "UPDATE status SET health = %f, armour = %f WHERE id = '%s';") (userfunction.pwn:1112 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:195)
+[00:08:59] [DEBUG] mysql_format: return value: '87' (userfunction.pwn:1112 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:195)
+[00:08:59] [DEBUG] mysql_tquery(1, "UPDATE status SET health = 148.000000, armour = 0.000000 WHERE id = 'Gonjals_Bocachio';", "", "") (userfunction.pwn:1121 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:195)
+[00:08:59] [DEBUG] CCallback::Create(amx=0x2a87c30, name='', format='', params=0x128a30d0, param_offset=5)
+[00:08:59] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x5560d8)
+[00:08:59] [DEBUG] CHandle::Execute - return value: true
+[00:08:59] [DEBUG] mysql_tquery: return value: '1' (userfunction.pwn:1121 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:195)
+[00:08:59] [DEBUG] mysql_format(1, 0x128A30F0, 256, "UPDATE bank SET money = %d WHERE id = '%s';") (userfunction.pwn:1124 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:195)
+[00:08:59] [DEBUG] mysql_format: return value: '60' (userfunction.pwn:1124 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:195)
+[00:08:59] [DEBUG] mysql_tquery(1, "UPDATE bank SET money = 95000 WHERE id = 'Gonjals_Bocachio';", "", "") (userfunction.pwn:1132 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:195)
+[00:08:59] [DEBUG] CCallback::Create(amx=0x2a87c30, name='', format='', params=0x128a30d0, param_offset=5)
+[00:08:59] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x5559b8)
+[00:08:59] [DEBUG] CHandle::Execute - return value: true
+[00:08:59] [DEBUG] mysql_tquery: return value: '1' (userfunction.pwn:1132 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:195)
+[00:08:59] [DEBUG] mysql_format(1, 0x128A30F0, 256, "UPDATE locationtime SET interior = %d, virtualworld = %d, posX = %f, posY = %f, posZ = %f, hour = %d, minute = %d, second = %d  WHERE id = '%s';") (userfunction.pwn:1134 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:195)
+[00:08:59] [DEBUG] CConnection::Execute(query=0x5560d8, this=0x12c3d020, connection=0x593480)
+[00:08:59] [DEBUG] CQuery::Execute(this=0x5560d8, connection=0x593480)
+[00:08:59] [DEBUG] mysql_format: return value: '181' (userfunction.pwn:1134 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:195)
+[00:08:59] [DEBUG] mysql_tquery(1, "UPDATE locationtime SET interior = 0, virtualworld = 0, posX = 1345.027954, posY = -1753.303589, posZ = 13.358012, hour = 1, minute = 49, second = 14  WHERE id = 'Gonjals_Bocachio';", "", "") (userfunction.pwn:1145 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:195)
+[00:08:59] [DEBUG] CCallback::Create(amx=0x2a87c30, name='', format='', params=0x128a30d0, param_offset=5)
+[00:08:59] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x555a50)
+[00:08:59] [DEBUG] CHandle::Execute - return value: true
+[00:08:59] [DEBUG] mysql_tquery: return value: '1' (userfunction.pwn:1145 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:195)
+[00:08:59] [DEBUG] mysql_format(1, 0x128A2C24, 256, "INSERT INTO items (id, itemName, count) VALUES ('%s', '%s', %d);") (userfunction.pwn:60 -> userfunction.pwn:1153 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:195)
+[00:08:59] [DEBUG] mysql_format: return value: '88' (userfunction.pwn:60 -> userfunction.pwn:1153 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:195)
+[00:08:59] [INFO] query "UPDATE status SET health = 148.000000, armour = 0.000000 WHERE id = 'Gonjals_Bocachio';" successfully executed within 15.97 milliseconds
+[00:08:59] [DEBUG] CResultSet::Create(connection=0x593480, query_str='UPDATE status SET health = 148.000000, armour = 0.000000 WHERE id = 'Gonjals_Bocachio';')
+[00:08:59] [DEBUG] created new resultset '0x5ae728'
+[00:08:59] [DEBUG] fetched MySQL result '0x0'
+[00:08:59] [DEBUG] mysql_tquery(1, "INSERT INTO items (id, itemName, count) VALUES ('Gonjals_Bocachio', '붐박스/오디오', 1);", "", "") (userfunction.pwn:61 -> userfunction.pwn:1153 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:195)
+[00:08:59] [DEBUG] CCallback::Create(amx=0x2a87c30, name='', format='', params=0x128a2c0c, param_offset=5)
+[00:08:59] [DEBUG] CConnection::Execute(query=0x5559b8, this=0x12c3d020, connection=0x593480)
+[00:08:59] [DEBUG] CQuery::Execute(this=0x5559b8, connection=0x593480)
+[00:08:59] [DEBUG] CHandle::Execute(this=0x56e6a8, type=1, query=0x556170)
+[00:08:59] [DEBUG] CHandle::Execute - return value: true
+[00:08:59] [DEBUG] mysql_tquery: return value: '1' (userfunction.pwn:61 -> userfunction.pwn:1153 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:195)
+[00:08:59] [INFO] query "UPDATE bank SET money = 95000 WHERE id = 'Gonjals_Bocachio';" successfully executed within 14.94 milliseconds
+[00:08:59] [DEBUG] CResultSet::Create(connection=0x593480, query_str='UPDATE bank SET money = 95000 WHERE id = 'Gonjals_Bocachio';')
+[00:08:59] [DEBUG] created new resultset '0x5ae4f8'
+[00:08:59] [DEBUG] fetched MySQL result '0x0'
+[00:08:59] [DEBUG] CConnection::Execute(query=0x555a50, this=0x12c3d020, connection=0x593480)
+[00:08:59] [DEBUG] CQuery::Execute(this=0x555a50, connection=0x593480)
+[00:08:59] [INFO] query "UPDATE locationtime SET interior = 0, virtualworld = 0, posX = 1345.027954, posY = -1753.303589, posZ = 13.358012, hour = 1, minute = 49, second = 14  WHERE id = 'Gonjals_Bocachio';" successfully executed within 14.815 milliseconds
+[00:08:59] [DEBUG] CResultSet::Create(connection=0x593480, query_str='UPDATE locationtime SET interior = 0, virtualworld = 0, posX = 1345.027954, posY = -1753.303589, posZ = 13.358012, hour = 1, minute = 49, second = 14  WHERE id = 'Gonjals_Bocachio';')
+[00:08:59] [DEBUG] created new resultset '0x5ae1b0'
+[00:08:59] [DEBUG] fetched MySQL result '0x0'
+[00:08:59] [DEBUG] CConnection::Execute(query=0x556170, this=0x12c3d020, connection=0x593480)
+[00:08:59] [DEBUG] CQuery::Execute(this=0x556170, connection=0x593480)
+[00:09:00] [INFO] query "INSERT INTO items (id, itemName, count) VALUES ('Gonjals_Bocachio', '붐박스/오디오', 1);" successfully executed within 15.685 milliseconds
+[00:09:00] [DEBUG] CResultSet::Create(connection=0x593480, query_str='INSERT INTO items (id, itemName, count) VALUES ('Gonjals_Bocachio', '붐박스/오디오', 1);')
+[00:09:00] [DEBUG] created new resultset '0x5ae680'
+[00:09:00] [DEBUG] fetched MySQL result '0x0'
+[00:09:04] [DEBUG] mysql_close(1) (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:143 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\previewModelDialog.inc:830)
+[00:09:04] [DEBUG] CHandleManager::Destroy(this=0x560190, handle=0x56e6a8)
+[00:09:04] [DEBUG] CHandle::~CHandle(this=0x56e6a8)
+[00:09:04] [DEBUG] CConnection::~CConnection(this=0x5621f0, connection=0x571be8)
+[00:09:04] [DEBUG] CThreadedConnection::~CThreadedConnection(this=0x12c3d020, connection=0x12c3d020)
+[00:09:04] [DEBUG] CThreadedConnection::WorkerFunc(this=0x12c3d020, connection=0x12c3d020) - shutting down
+[00:09:04] [DEBUG] CConnection::~CConnection(this=0x12c3d020, connection=0x593480)
+[00:09:04] [DEBUG] CConnectionPool::~CConnectionPool(this=0x5620b0)
+[00:09:04] [DEBUG] CThreadedConnection::~CThreadedConnection(this=0x12e01020, connection=0x12e01020)
+[00:09:04] [DEBUG] CThreadedConnection::WorkerFunc(this=0x12e01020, connection=0x12e01020) - shutting down
+[00:09:04] [DEBUG] CConnection::~CConnection(this=0x12e01020, connection=0x59d470)
+[00:09:04] [DEBUG] CThreadedConnection::~CThreadedConnection(this=0x12fdf020, connection=0x12fdf020)
+[00:09:04] [DEBUG] CThreadedConnection::WorkerFunc(this=0x12fdf020, connection=0x12fdf020) - shutting down
+[00:09:04] [DEBUG] CConnection::~CConnection(this=0x12fdf020, connection=0x5a7ca0)
+[00:09:04] [DEBUG] mysql_close: return value: '1' (C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\gamemodes\UnlimitedRP.pwn:143 -> C:\Users\Nell\Documents\SA-MP-UnlimitedRP\UnlimitedRP\pawno\include\previewModelDialog.inc:830)
+[22:14:40] [ERROR] CConnection::CConnection - establishing connection to MySQL database failed: #2002 'Can't connect to MySQL server on 'nell69rock.myq-see.com' (10060)'
+[22:15:53] [ERROR] CConnection::CConnection - establishing connection to MySQL database failed: #2002 'Can't connect to MySQL server on 'nell69rock.myq-see.com' (10060)'
+[22:16:14] [ERROR] CConnection::CConnection - establishing connection to MySQL database failed: #2002 'Can't connect to MySQL server on 'nell69rock.myq-see.com' (10060)'
+[22:16:35] [ERROR] CConnection::CConnection - establishing connection to MySQL database failed: #2002 'Can't connect to MySQL server on 'nell69rock.myq-see.com' (10060)'

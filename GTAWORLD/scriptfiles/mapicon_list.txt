@@ -1,0 +1,64 @@
+Colored Square/Triangle (선택 X)
+White Squaree (선택 X)
+Player Position (선택 X)
+Player (Menu Map) (선택 X)
+North (선택 X)
+Air Yard 
+Ammunation 
+Barber 
+Big Smoke 
+Boat Yard 
+Burger Shot 
+Quarry 
+Catalina 
+Cesar 
+Cluckin Bell 
+Carl Johnson 
+C.R.A.S.H 
+Diner 
+Emmet 
+Enemy Attack 
+Fire 
+Girlfriend 
+Hospital 
+Loco 
+Madd Dogg 
+Caligulas 
+OG Loc 
+Mod Garage 
+OG Loc 
+Well Stacked Pizza Co 
+Police 
+Property 
+Property 
+Race 
+Ryder 
+Save Game 
+School 
+Unknown 
+Sweet 
+Tattoo 
+The Truth 
+Waypoint
+Toreno 
+Triads 
+Triads Casino 
+Clothes 
+Woozie 
+Zero 
+Club 
+Bar 
+Restaurant 
+Truck 
+Robbery(Bank) 
+Race 
+Gym 
+Car 
+Light (선택 X)
+Closest airport (선택 X)
+Varrios Los Aztecas 
+Ballas 
+Los Santos Vagos 
+San Fierro Rifa 
+Grove street 
+Pay n Spray"
