@@ -4,19 +4,38 @@ stock PlayerName(playerid)
 	GetPlayerName(playerid, UserName, sizeof(UserName));
 	return UserName;
 }
+stock ShowUserText(string[])
+{
+	new str[128],warndstr[2048];
+	new extraString[2048];
+	new buf[10];
+	new jobnum = 0;
+	new File:handle = fopen(string,io_read);
+	if(handle)
+	{
+		while(fread(handle, str))
+		{
+			strcat(warndstr, str); // ÀĞÀº Å©±â¸¸Å­ ÀÏ´Ü Ãß°¡.
+		}
+		fclose(handle);
+		return warndstr;
+	}			
+	return warndstr;
+}
 
 public CheckAccount(playerid)
 {
     new string[256];
     if(cache_num_rows() > 0)
     {
-		format(string,sizeof(string),"ì›¹ í˜ì´ì§€ ê³„ì •\"%s\"ì˜ íšŒì› ì •ë³´ë¥¼ ì°¾ì•˜ìŠµë‹ˆë‹¤. ê³„ì • ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”.\n(ê³„ì • ë¹„ë°€ë²ˆí˜¸ëŠ” ì‚¬ì´íŠ¸ì˜ ë¹„ë°€ë²ˆí˜¸ì™€ ë™ì¼í•©ë‹ˆë‹¤.)",PlayerName(playerid));
-		ShowPlayerDialog(playerid, DIALOG_LOG, DIALOG_STYLE_PASSWORD,"USER_LOGIN",string,"ì…ë ¥", "ì·¨ì†Œ");
+		SendClientMessageToAll(-1, "asdfasdfa");
+		format(string,sizeof(string),"À¥ ÆäÀÌÁö °èÁ¤\"%s\"ÀÇ È¸¿ø Á¤º¸¸¦ Ã£¾Ò½À´Ï´Ù. °èÁ¤ ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä.\n(°èÁ¤ ºñ¹Ğ¹øÈ£´Â »çÀÌÆ®ÀÇ ºñ¹Ğ¹øÈ£¿Í µ¿ÀÏÇÕ´Ï´Ù.)",PlayerName(playerid));
+		ShowPlayerDialog(playerid, DIALOG_LOG, DIALOG_STYLE_PASSWORD,"USER_LOGIN",string,"ÀÔ·Â", "Ãë¼Ò");
 		cache_get_value_name(0, "password", Player[playerid][PWD], 65);
 	}
     else
     {
-	    ShowPlayerDialog(playerid, DIALOG_ID, DIALOG_STYLE_MSGBOX, "LOGIN_ERROR", "ê³„ì • ì •ë³´ê°€ í™•ì¸ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤.\n\"jsea.myq-see.com\"\ní˜¹ì€ ìƒ˜í”„ ì„œë²„ ì •ë³´ì°½ì—ì„œ ë³´ì´ëŠ” URLì„ í´ë¦­í•˜ì—¬ ì‚¬ì´íŠ¸ ê°€ì… í›„ ì´ìš©í•´ ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.","í™•ì¸","");
+	    ShowPlayerDialog(playerid, DIALOG_ID, DIALOG_STYLE_MSGBOX, "LOGIN_ERROR", "°èÁ¤ Á¤º¸°¡ È®ÀÎµÇÁö ¾Ê½À´Ï´Ù.\n\"jsea.myq-see.com\"\nÈ¤Àº »ùÇÁ ¼­¹ö Á¤º¸Ã¢¿¡¼­ º¸ÀÌ´Â URLÀ» Å¬¸¯ÇÏ¿© »çÀÌÆ® °¡ÀÔ ÈÄ ÀÌ¿ëÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.","È®ÀÎ","");
     }
 }
 public CheckPassword(playerid, password[])

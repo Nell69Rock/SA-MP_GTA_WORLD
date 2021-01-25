@@ -26,6 +26,11 @@ public OnGameModeInit()
 	SetGameModeText(string);
 	format(string, sizeof(string), "weburl %s", WEBSITE);
 	SendRconCommand(string);
+
+	EnableStuntBonusForAll(0);
+	DisableInteriorEnterExits();
+	DisableNameTagLOS();
+	ManualVehicleEngineAndLights();
 	
 	/*	NONE Logs absolutely nothing.
 	    ERROR Logs errors.
@@ -46,7 +51,7 @@ public OnGameModeInit()
 	CreateGangZone();
 	//##############TIMER#################
 	SetTimer("IsPlayerInArea",1000, true);
-	SetTimer("setPlayerEnvironment", 1000, true);	
+	SetTimer("setPlayerEnvironment", HOURS, true);	
 	return 1;
 }
 
@@ -73,14 +78,14 @@ public OnPlayerRequestClass(playerid, classid)
 public OnPlayerConnect(playerid)
 {
 	new string[64];
-    format(string,sizeof string,"%s님이 들어왔습니다.",PlayerName(playerid));
-    SendClientMessageToAll(0xFFFFFFAA,string);
+    format(string, sizeof(string),"SYSTEM) "#C_WHITE"%s(%d)님이 들어왔습니다.", PlayerName(playerid), playerid);
+    SendClientMessageToAll(COLOR_YELLOW, string);
 	return 1;
 }
 
 public OnPlayerDisconnect(playerid, reason)
 {
-	new szString[64];
+	new string[64];
 
     new szDisconnectReason[3][] =
     {
@@ -90,8 +95,8 @@ public OnPlayerDisconnect(playerid, reason)
     };
 
 	HideForGZ(playerid);
-    format(szString, sizeof szString, "SYSTEM) "#C_WHITE"%s(%d)님이 게임을 종료하였습니다.(%s).", PlayerName(playerid), playerid, szDisconnectReason[reason]);
-    SendClientMessageToAll(COLOR_YELLOW, szString);
+    format(string, sizeof(string), "SYSTEM) "#C_WHITE"%s(%d)님이 게임을 종료하였습니다.(%s).", PlayerName(playerid), playerid, szDisconnectReason[reason]);
+    SendClientMessageToAll(COLOR_YELLOW, string);
     return 1;
 }
 
@@ -106,7 +111,7 @@ public OnPlayerSpawn(playerid)
  	ShowForGZ(playerid);
 	//########################TUTORIAL#########################
 	if(Player[playerid][TUTORIAL] == 0)
-	    ShowPlayerDialog(playerid, DIALOG_TUT, DIALOG_STYLE_LIST,"차량 선택", "컨버터블 차량\n산업용 차량\n오프로드 차량\n로우라이더\n세단\n스포츠카", "선택","");
+	    ShowPlayerDialog(playerid, DIALOG_TUT, DIALOG_STYLE_MSGBOX,"튜토리얼", ShowUserText("tutorial_WORLD.txt"), "다음","");
 	return 1;
 }
 
@@ -300,24 +305,18 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		}
 		case DIALOG_TUT:
 		{
-			if(!response)
-				return 0;
-			switch(listitem)
+			new subString[64];
+			new string[sizeof(VEHICLE_CONVERTIBLES) * sizeof(subString)];
+			
+			if (!response)
+			if (string[0] == EOS)
 			{
-				case 0:
+				for (new i; i < sizeof(VEHICLE_CONVERTIBLES); i++)
 				{
-					new subString[64];
-					new string[sizeof(VEHICLE_CONVERTIBLES) * sizeof(subString)];
-					if (string[0] == EOS)
-					{
-						for (new i; i < sizeof(VEHICLE_CONVERTIBLES); i++)
-						{
-							format(subString, sizeof(subString), "%i(0.0, 0.0, -50.0, 1.5)\t%s~n~~g~~h~$%i\n", VEHICLE_CONVERTIBLES[i][VEHILCE_MODELID], VEHICLE_CONVERTIBLES[i][VEHILCE_NAME], VEHICLE_CONVERTIBLES[i][VEHILCE_PRICE]);
-							strcat(string, subString);
-						}
-						ShowPlayerDialog(playerid, DIALOG_V_CON, DIALOG_STYLE_PREVIEW_MODEL, "Vehicle Shop Dialog", string, "Purchase", "Cancel");
-					}
+					format(subString, sizeof(subString), "%i(0.0, 0.0, -50.0, 1.5)\t%s~n~~g~~h~$%i\n", VEHICLE_CONVERTIBLES[i][VEHILCE_MODELID], VEHICLE_CONVERTIBLES[i][VEHILCE_NAME], VEHICLE_CONVERTIBLES[i][VEHILCE_PRICE]);
+					strcat(string, subString);
 				}
+				ShowPlayerDialog(playerid, DIALOG_V_CON, DIALOG_STYLE_PREVIEW_MODEL, "Vehicle Shop Dialog", string, "Purchase", "Cancel");
 			}
 			return 1;
 		}

@@ -2,7 +2,7 @@
 #pragma tabsize 0
 //##################USER MODSCRIPT###########################
 #define SCRIPT_VERSION "Ver:1.0.0"
-#define WEBSITE	"jsea.myq-see.com/outpost"
+#define WEBSITE	"nell69rock.myq-see.com/outpost"
 #define SERVER1	"GTA:WORLD Racing Group"
 //##################USER COLOR###############################
 #define COLOR_ACTIVEBORDER 0xB4B4B4FF
@@ -193,6 +193,11 @@
 #define C_lGREY "{AAAAAA}"
 #define C_dGREY "{222222}"
 #define C_WHITE "{FFFFFF}"
+//##################USER TIMER############################
+#define SECONDS 1000
+#define MINUTES SECONDS * 60
+#define HOURS MINUTES * 60
+
 //##################USER DIALOG###########################
 #define DIALOG_LOG 0
 #define DIALOG_ID 1
