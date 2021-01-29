@@ -219,11 +219,10 @@ forward ShowForGZ(playerid);
 forward HideForGZ(playerid);
 forward CreateGangZone();
 forward IsPlayerInArea(playerid);
-forward setPlayerEnvironment();
+forward SetPlayerEnvironment();
 //##################USER ENUM#############################
 new MySQL:g_Sql;
 new worldHour = 0;
-new worldWeather = 0;
 
 enum PLAYER_INFO
 {
