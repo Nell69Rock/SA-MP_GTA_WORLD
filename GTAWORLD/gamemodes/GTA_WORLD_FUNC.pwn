@@ -1,3 +1,4 @@
+////////////////////////////////////////////////////////////////////////////////stock
 stock PlayerName(playerid)
 {
 	new UserName[64];
@@ -7,9 +8,6 @@ stock PlayerName(playerid)
 stock ShowUserText(string[])
 {
 	new str[128],warndstr[2048];
-	new extraString[2048];
-	new buf[10];
-	new jobnum = 0;
 	new File:handle = fopen(string,io_read);
 	if(handle)
 	{
@@ -22,13 +20,49 @@ stock ShowUserText(string[])
 	}			
 	return warndstr;
 }
-
+stock ShowPlayerAccDialog(playerid, Array[][SHOP_DATA], sex, jobid, size)
+{
+	new subString[64];
+	new string[10240 * sizeof(subString)];
+	new j = 0;
+	for (new i = 0; i < size; i++)
+	{
+		if(Array[i][SEX] == sex && Array[i][JOB_ID] == jobid)
+		{
+			Player[playerid][SAVE_NUM][j] = Array[i][MODELID];
+			Player[playerid][SAVE_PRICE][j] = Array[i][PRICE];
+			format(subString, sizeof(subString), "%i(0.0, 0.0, -50.0, 1.5)\t%s~n~~g~~h~$%i\n", 
+			Array[i][MODELID], Array[i][NAME], Array[i][PRICE]);
+			strcat(string, subString);
+			j = j + 1;
+		}
+		else if(jobid == -1) //모든 직업을 다 보여줌.
+		{
+			if(Array[i][SEX] == sex)
+			{
+				Player[playerid][SAVE_NUM][j] = Array[i][MODELID];
+				Player[playerid][SAVE_PRICE][j] = Array[i][PRICE];
+				format(subString, sizeof(subString), "%i(0.0, 0.0, -50.0, 1.5)\t%s~n~~g~~h~$%i\n", 
+				Array[i][MODELID], Array[i][NAME], Array[i][PRICE]);
+				strcat(string, subString);
+				j = j + 1;
+			}
+		}
+		else if(Player[playerid][JOB] > 8 && Array[i][SEX] == sex ) //모든 직업을 다 보여줌.
+		{
+			format(subString, sizeof(subString), "%i(0.0, 0.0, -50.0, 1.5)\t%s~n~~g~~h~$%i\n", 
+			Array[i][MODELID], Array[i][NAME], Array[i][PRICE]);
+			strcat(string, subString);
+		}
+	}
+	return string;
+}
+//////////////////////////////////////////////////////////////////////////////public
 public CheckAccount(playerid)
 {
     new string[256];
     if(cache_num_rows() > 0)
     {
-		SendClientMessageToAll(-1, "asdfasdfa");
 		format(string,sizeof(string),"웹 페이지 계정\"%s\"의 회원 정보를 찾았습니다. 계정 비밀번호를 입력하세요.\n(계정 비밀번호는 사이트의 비밀번호와 동일합니다.)",PlayerName(playerid));
 		ShowPlayerDialog(playerid, DIALOG_LOG, DIALOG_STYLE_PASSWORD,"USER_LOGIN",string,"입력", "취소");
 		cache_get_value_name(0, "password", Player[playerid][PWD], 65);
@@ -142,13 +176,20 @@ public IsPlayerInArea(playerid)
 	}
 	return 1;
 }
-public setPlayerEnvironment()
+public SetPlayerEnvironment()
 {
 	
-	SetWorldTime(worldHour);
-	worldHour = worldHour + 1;
+	new string[64];
+	new weather = random(10);
+	SetWorldTime(worldHour++);
 	if(worldHour > 23)
+	{
 	    worldHour = 0;
+	}
+	SetWeather(weather);
+
+	format(string, sizeof(string),"SYSTEM)"#C_WHITE" 현재 게임시간은 "#C_GREEN"(%d)"#C_WHITE"시 입니다.",worldHour);
+	SendClientMessageToAll(COLOR_RED, string);
 }
 
 //##################USER FUNCTION#########################
