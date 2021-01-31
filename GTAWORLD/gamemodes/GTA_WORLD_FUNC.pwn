@@ -20,42 +20,22 @@ stock ShowUserText(string[])
 	}			
 	return warndstr;
 }
-stock ShowPlayerAccDialog(playerid, Array[][SHOP_DATA], sex, jobid, size)
+stock ShowPlayerModelDialog(Array[][E_VEHILCE_SHOP_DATA], size)
 {
 	new subString[64];
 	new string[10240 * sizeof(subString)];
-	new j = 0;
 	for (new i = 0; i < size; i++)
 	{
-		if(Array[i][SEX] == sex && Array[i][JOB_ID] == jobid)
-		{
-			Player[playerid][SAVE_NUM][j] = Array[i][MODELID];
-			Player[playerid][SAVE_PRICE][j] = Array[i][PRICE];
-			format(subString, sizeof(subString), "%i(0.0, 0.0, -50.0, 1.5)\t%s~n~~g~~h~$%i\n", 
-			Array[i][MODELID], Array[i][NAME], Array[i][PRICE]);
-			strcat(string, subString);
-			j = j + 1;
-		}
-		else if(jobid == -1) //모든 직업을 다 보여줌.
-		{
-			if(Array[i][SEX] == sex)
-			{
-				Player[playerid][SAVE_NUM][j] = Array[i][MODELID];
-				Player[playerid][SAVE_PRICE][j] = Array[i][PRICE];
-				format(subString, sizeof(subString), "%i(0.0, 0.0, -50.0, 1.5)\t%s~n~~g~~h~$%i\n", 
-				Array[i][MODELID], Array[i][NAME], Array[i][PRICE]);
-				strcat(string, subString);
-				j = j + 1;
-			}
-		}
-		else if(Player[playerid][JOB] > 8 && Array[i][SEX] == sex ) //모든 직업을 다 보여줌.
-		{
-			format(subString, sizeof(subString), "%i(0.0, 0.0, -50.0, 1.5)\t%s~n~~g~~h~$%i\n", 
-			Array[i][MODELID], Array[i][NAME], Array[i][PRICE]);
-			strcat(string, subString);
-		}
+		format(subString, sizeof(subString), "%i(0.0, 0.0, -50.0, 1.5)\t%s~n~~g~~h~$%i\n", 
+		Array[i][VEHILCE_MODELID], Array[i][VEHILCE_NAME], Array[i][VEHILCE_PRICE]);
+		strcat(string, subString);
 	}
 	return string;
+}
+stock SetPlayerMoney(playerid, money)
+{
+    ResetPlayerMoney(playerid);
+    GivePlayerMoney(playerid, money);
 }
 //////////////////////////////////////////////////////////////////////////////public
 public CheckAccount(playerid)
@@ -80,23 +60,12 @@ public CheckPassword(playerid, password[])
 }
 public InitUserData(playerid)
 {
-	/*
-		enum PLAYER_INFO
-		{
-			NAME[64],
-			PWD[65],
-			TUTORIAL,
-		    LEVEL,
-			EXP,
-			PLAY_TIME[3],
-			Float:POS[3]
-		};
-	*/
 	Player[playerid][NAME] = PlayerName(playerid);
     Player[playerid][TUTORIAL] = 0;
     Player[playerid][LEVEL] = 0;
     Player[playerid][EXP] = 0;
     Player[playerid][SPAWN] = 0;
+	Player[playerid][MONEY] = 5000;
     Player[playerid][PLAY_TIME][0] = 0;
     Player[playerid][PLAY_TIME][1] = 0;
     Player[playerid][PLAY_TIME][2] = 0;

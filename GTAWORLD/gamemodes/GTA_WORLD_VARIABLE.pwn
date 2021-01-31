@@ -220,16 +220,19 @@ forward HideForGZ(playerid);
 forward CreateGangZone();
 forward IsPlayerInArea(playerid);
 forward SetPlayerEnvironment();
-//##################USER ENUM#############################
+
+//##################USER VARIABLE#############################
 new MySQL:g_Sql;
 new worldHour = 0;
+//##################USER ENUM#############################
 
 enum PLAYER_INFO
 {
 	NAME[64],
 	PWD[65],
+    SPAWN,
+    MONEY,
 	TUTORIAL,
-	SPAWN,
     LEVEL,
 	EXP,
 	PLAY_TIME[3],
@@ -306,50 +309,50 @@ enum E_VEHILCE_SHOP_DATA {
     VEHILCE_PRICE,
 };
 
-new const VEHICLE_CONVERTIBLES[][E_VEHILCE_SHOP_DATA] = {
-    {439, "Stallion", 0},
-    {480, "Comet", 0},
-    {533, "Feltzer", 0},
-    {555, "Windsor", 0}
+new VEHICLE_CONVERTIBLES[][E_VEHILCE_SHOP_DATA] = {
+    {439, "Stallion", 30000},
+    {480, "Comet", 30000},
+    {533, "Feltzer", 30000},
+    {555, "Windsor", 30000}
 };
-new const VEHICLE_INDUSTRIAL[][E_VEHILCE_SHOP_DATA] = {
-    {413, "Pony", 0},
-    {422, "Bobcat", 0},
-    {440, "Rumpo", 0},
-    {459, "Topfun Van (Berkley's RC)", 0},
-    {478, "Walton", 0},
-    {482, "Burrito", 0},
-    {543, "Sadler", 0},
-    {552, "Utility Van", 0},
-    {554, "Yosemite", 0},
-    {582, "Newsvan", 0},
-    {600, "Picador", 0},
-    {605, "Sadler Shit", 0}
-};
-
-new const VEHICLE_LOWRIDERS[][E_VEHILCE_SHOP_DATA] = {
-    {412, "Voodoo", 0},
-    {534, "Remington", 0},
-    {535, "Slamvan", 0},
-    {536, "Blade", 0},
-    {566, "Tahoma", 0},
-    {567, "Savanna", 0},
-    {575, "Broadway", 0},
-    {576, "Tornado", 0}
+new VEHICLE_INDUSTRIAL[][E_VEHILCE_SHOP_DATA] = {
+    {413, "Pony", 5000},
+    {422, "Bobcat", 5000},
+    {440, "Rumpo", 5000},
+    {459, "Topfun Van (Berkley's RC)", 5000},
+    {478, "Walton", 5000},
+    {482, "Burrito", 5000},
+    {543, "Sadler", 5000},
+    {552, "Utility Van", 5000},
+    {554, "Yosemite", 5000},
+    {582, "Newsvan", 5000},
+    {600, "Picador", 5000},
+    {605, "Sadler Shit", 5000}
 };
 
-new const VEHICLE_OFFROAD[][E_VEHILCE_SHOP_DATA] = {
-    {400, "Landstalker", 0},
-    {424, "BF Injection", 0},
-    {489, "Rancher", 0},
-    {495, "Sandking", 0},
-    {500, "Mesa", 0},
-    {505, "Rancher Lure", 0},
-    {568, "Bandito", 0},
-    {579, "Huntley", 0}
+new VEHICLE_LOWRIDERS[][E_VEHILCE_SHOP_DATA] = {
+    {412, "Voodoo", 20000},
+    {534, "Remington", 20000},
+    {535, "Slamvan", 20000},
+    {536, "Blade", 20000},
+    {566, "Tahoma", 20000},
+    {567, "Savanna", 20000},
+    {575, "Broadway", 20000},
+    {576, "Tornado", 20000}
 };
 
-new const VEHICLE_SALOONS[][E_VEHILCE_SHOP_DATA] = {
+new VEHICLE_OFFROAD[][E_VEHILCE_SHOP_DATA] = {
+    {400, "Landstalker", 15000},
+    {424, "BF Injection", 15000},
+    {489, "Rancher", 15000},
+    {495, "Sandking", 15000},
+    {500, "Mesa", 15000},
+    {505, "Rancher Lure", 15000},
+    {568, "Bandito", 15000},
+    {579, "Huntley", 15000}
+};
+
+new VEHICLE_SALOONS[][E_VEHILCE_SHOP_DATA] = {
     {401, "Bravura", 0},
     {405, "Sentinel", 0},
     {410, "Manana", 0},
@@ -384,7 +387,7 @@ new const VEHICLE_SALOONS[][E_VEHILCE_SHOP_DATA] = {
     {585, "Emperor", 0},
     {604, "Glendale Shit", 0}
 };
-new const VEHICLE_SPORTS[][E_VEHILCE_SHOP_DATA] = {
+new VEHICLE_SPORTS[][E_VEHILCE_SHOP_DATA] = {
     {402, "Buffalo", 0},
     {411, "Infernus", 0},
     {415, "Cheetah", 0},

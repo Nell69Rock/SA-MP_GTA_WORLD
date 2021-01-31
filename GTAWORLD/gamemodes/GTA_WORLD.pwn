@@ -248,7 +248,7 @@ public OnRconLoginAttempt(ip[], password[], success)
 public OnPlayerUpdate(playerid)
 {
 	new Float:vHealth;
-	if(GetVehicleHealth(GetPlayerVehicleID(playerid),vHealth) < 650)
+	if(IsPlayerInAnyVehicle(playerid) && GetVehicleHealth(GetPlayerVehicleID(playerid),vHealth) < 650)
 	{
 	    SetVehicleHealth(GetPlayerVehicleID(playerid), 1000);
 	    RepairVehicle(GetPlayerVehicleID(playerid));
@@ -305,30 +305,42 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		}
 		case DIALOG_TUT:
 		{
-			new subString[64];
-			new string[sizeof(VEHICLE_CONVERTIBLES) * sizeof(subString)];
-			
-			if (!response)
-			if (string[0] == EOS)
-			{
-				for (new i; i < sizeof(VEHICLE_CONVERTIBLES); i++)
-				{
-					format(subString, sizeof(subString), "%i(0.0, 0.0, -50.0, 1.5)\t%s~n~~g~~h~$%i\n", VEHICLE_CONVERTIBLES[i][VEHILCE_MODELID], VEHICLE_CONVERTIBLES[i][VEHILCE_NAME], VEHICLE_CONVERTIBLES[i][VEHILCE_PRICE]);
-					strcat(string, subString);
-				}
-				ShowPlayerDialog(playerid, DIALOG_V_CON, DIALOG_STYLE_PREVIEW_MODEL, "Vehicle Shop Dialog", string, "Purchase", "Cancel");
-			}
+			new size = sizeof(VEHICLE_CONVERTIBLES);
+			if (response)
+				ShowPlayerDialog(playerid, DIALOG_V_CON, DIALOG_STYLE_PREVIEW_MODEL, "Vehicle Shop Dialog(VEHICLE_INDUSTRIAL)", ShowPlayerModelDialog(VEHICLE_INDUSTRIAL, size), "Purchase", "Cancel");
 			return 1;
 		}
 		case DIALOG_V_CON:
 		{
+			return 1;
+		}
+		case DIALOG_V_IND:
+		{
 			new Float:X, Float: Y, Float: Z;
 			if(!response) return 0;
 			GetPlayerPos(playerid, X,Y,Z);
-	        new my_vehicle_id = CreateVehicle(VEHICLE_CONVERTIBLES[listitem][VEHILCE_MODELID],X,Y,Z, 0, 0, 0, -1);
+	        new my_vehicle_id = CreateVehicle(VEHICLE_INDUSTRIAL[listitem][VEHILCE_MODELID],X,Y,Z, 0, 0, 0, -1);
 	        PutPlayerInVehicle(playerid, my_vehicle_id, 0);
 			return 1;
+
 		}
+		case DIALOG_V_LOW:
+		{
+			return 1;
+		}
+		case DIALOG_V_OFF:
+		{
+			return 1;
+		}
+		case DIALOG_V_SAL: // ½Â¿ëÂ÷
+		{
+			return 1;
+		}
+		case DIALOG_V_SPO: 
+		{
+			return 1;
+		}
+		
 	}
 	return 0;
 }

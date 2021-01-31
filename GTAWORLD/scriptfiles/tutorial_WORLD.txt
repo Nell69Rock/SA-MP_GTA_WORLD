@@ -1,16 +1,17 @@
 ============================ TUTORIAL ========================================
-GTA : WORLD Racing Serverì— ì˜¤ì‹ ê²ƒì„ ì§„ì‹¬ìœ¼ë¡œ í™˜ì˜í•©ë‹ˆë‹¤.
+GTA : WORLD Racing Server¿¡ ¿À½Å°ÍÀ» Áø½ÉÀ¸·Î È¯¿µÇÕ´Ï´Ù.
 
 
-ë³¸ ì„œë²„ëŠ” Free roam race ê²Œìž„ì„ ì§€í–¥í•˜ëŠ” ì„œë²„ ìž…ë‹ˆë‹¤.
+º» ¼­¹ö´Â Free roam race °ÔÀÓÀ» ÁöÇâÇÏ´Â ¼­¹ö ÀÔ´Ï´Ù.
 
 
-ì¡°ìž‘ë²• 
+Á¶ÀÛ¹ý 
 
-Gear up    : 8
-Grar down  : 2
+Clutch : NUMPAD 0
+Gear up    : Cluth + NUMPAD 8
+Grar down  : Cluth + NUMPAD 2 
 
 
 ============================ TUTORIAL END ========================================
 
-íŠœí† ë¦¬ì–¼ì„ ì™„ë£Œ í•˜ì˜€ìŠµë‹ˆë‹¤. ê³„ì†í•´ì„œ ì›í•˜ì‹œë©´ ì§„í–‰ì„, ë¶€ì¡±í•œ ë¶€ë¶„ì´ ìžˆë‹¤ë©´ ì¡°ê¸ˆ ë” ì‚´íŽ´ ë³´ì‹­ì‹œì˜¤.
+Æ©Åä¸®¾óÀ» ¿Ï·á ÇÏ¿´½À´Ï´Ù. °è¼ÓÇØ¼­ ¿øÇÏ½Ã¸é ÁøÇàÀ», ºÎÁ·ÇÑ ºÎºÐÀÌ ÀÖ´Ù¸é Á¶±Ý ´õ »ìÆì º¸½Ê½Ã¿À.
