@@ -64,7 +64,7 @@ public InitUserData(playerid)
     Player[playerid][LEVEL] = 0;
     Player[playerid][EXP] = 0;
     Player[playerid][SPAWN] = 0;
-	Player[playerid][MONEY] = 5000;
+	Player[playerid][MONEY] = 15000;
 	for(new i = 0; i < 3; i++)
 	{
 		Player[playerid][PLAY_TIME][i] = 0;

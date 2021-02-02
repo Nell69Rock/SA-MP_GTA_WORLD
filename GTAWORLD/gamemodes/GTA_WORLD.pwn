@@ -111,7 +111,7 @@ public OnPlayerSpawn(playerid)
  	ShowForGZ(playerid);
 	//########################TUTORIAL#########################
 	if(Player[playerid][TUTORIAL] == 0)
-	    ShowPlayerDialog(playerid, DIALOG_TUT, DIALOG_STYLE_MSGBOX,"튜토리얼", ShowUserText("tutorial_WORLD.txt"), "다음","");
+	    ShowPlayerDialog(playerid, DIALOG_V_OFF, DIALOG_STYLE_MSGBOX,"튜토리얼", ShowUserText("tutorial_WORLD.txt"), "다음","");
 	return 1;
 }
 
@@ -284,7 +284,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		case DIALOG_ID:
 		{
 			if(!response) Kick(playerid);
-			ShowPlayerDialog(playerid, DIALOG_ID, DIALOG_STYLE_MSGBOX, "LOGIN_ERROR", "계정 정보가 확인되지 않습니다.\n\"jsea.myq-see.com\"\n혹은 샘프 서버 정보창에서 보이는 URL을 클릭하여 사이트 가입 후 이용해 주시기 바랍니다.","확인","");
+			ShowPlayerDialog(playerid, DIALOG_ID, DIALOG_STYLE_MSGBOX, "LOGIN_ERROR", "계정 정보가 확인되지 않습니다.\n\"Nell69Rock.myq-see.com/outpost\"\n혹은 샘프 서버 정보창에서 보이는 URL을 클릭하여 사이트 가입 후 이용해 주시기 바랍니다.","확인","");
 			return 1;
 		}
 		case DIALOG_LOG:
@@ -301,10 +301,6 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			
 			SendClientMessage(playerid, COLOR_RED, "INFO) "#C_WHITE"성공적으로 로그인이 되었습니다. 즐거운 게임 되시길 바랍니다.");
 			SpawnPlayer(playerid);
-			return 1;
-		}
-		case DIALOG_TUT:
-		{
 			return 1;
 		}
 		case DIALOG_V_CON:
