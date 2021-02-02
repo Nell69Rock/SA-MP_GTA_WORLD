@@ -20,14 +20,17 @@ stock ShowUserText(string[])
 	}			
 	return warndstr;
 }
-stock ShowPlayerModelDialog(Array[][E_VEHILCE_SHOP_DATA], size)
+stock ShowPlayerModelDialog(playerid, Array[][E_VEHILCE_SHOP_DATA], size)
 {
 	new subString[64];
 	new string[10240 * sizeof(subString)];
+	InitUserTempData(playerid);
 	for (new i = 0; i < size; i++)
 	{
 		format(subString, sizeof(subString), "%i(0.0, 0.0, -50.0, 1.5)\t%s~n~~g~~h~$%i\n", 
 		Array[i][VEHILCE_MODELID], Array[i][VEHILCE_NAME], Array[i][VEHILCE_PRICE]);
+		Player[playerid][TEMP_MODEL_NUM][i] = Array[i][VEHILCE_MODELID];
+		Player[playerid][TEMP_MODEL_PRICE][i] = Array[i][VEHILCE_PRICE];
 		strcat(string, subString);
 	}
 	return string;
@@ -41,16 +44,12 @@ stock SetPlayerMoney(playerid, money)
 public CheckAccount(playerid)
 {
     new string[256];
-    if(cache_num_rows() > 0)
-    {
-		format(string,sizeof(string),"웹 페이지 계정\"%s\"의 회원 정보를 찾았습니다. 계정 비밀번호를 입력하세요.\n(계정 비밀번호는 사이트의 비밀번호와 동일합니다.)",PlayerName(playerid));
-		ShowPlayerDialog(playerid, DIALOG_LOG, DIALOG_STYLE_PASSWORD,"USER_LOGIN",string,"입력", "취소");
-		cache_get_value_name(0, "password", Player[playerid][PWD], 65);
-	}
-    else
-    {
-	    ShowPlayerDialog(playerid, DIALOG_ID, DIALOG_STYLE_MSGBOX, "LOGIN_ERROR", "계정 정보가 확인되지 않습니다.\n\"jsea.myq-see.com\"\n혹은 샘프 서버 정보창에서 보이는 URL을 클릭하여 사이트 가입 후 이용해 주시기 바랍니다.","확인","");
-    }
+	if(cache_num_rows() < 0)
+		ShowPlayerDialog(playerid, DIALOG_ID, DIALOG_STYLE_MSGBOX, "LOGIN_ERROR", "계정 정보가 확인되지 않습니다.\n\"Nell69Rock.myq-see.com/outpost\"\n혹은 샘프 서버 정보창에서 보이는 URL을 클릭하여 사이트 가입 후 이용해 주시기 바랍니다.","확인","");
+	
+	format(string,sizeof(string),"웹 페이지 계정\"%s\"의 회원 정보를 찾았습니다. 계정 비밀번호를 입력하세요.\n(계정 비밀번호는 사이트의 비밀번호와 동일합니다.)",PlayerName(playerid));
+	ShowPlayerDialog(playerid, DIALOG_LOG, DIALOG_STYLE_PASSWORD,"USER_LOGIN",string,"입력", "취소");
+	cache_get_value_name(0, "password", Player[playerid][PWD], 65);
 }
 public CheckPassword(playerid, password[])
 {
@@ -66,12 +65,19 @@ public InitUserData(playerid)
     Player[playerid][EXP] = 0;
     Player[playerid][SPAWN] = 0;
 	Player[playerid][MONEY] = 5000;
-    Player[playerid][PLAY_TIME][0] = 0;
-    Player[playerid][PLAY_TIME][1] = 0;
-    Player[playerid][PLAY_TIME][2] = 0;
-    Player[playerid][POS][0] = 0;
-    Player[playerid][POS][1] = 0;
-    Player[playerid][POS][2] = 0;
+	for(new i = 0; i < 3; i++)
+	{
+		Player[playerid][PLAY_TIME][i] = 0;
+		Player[playerid][POS][i] = 0;
+	}
+}
+public InitUserTempData(playerid)
+{
+	for(new i = 0; i < 50; i++)
+	{
+		Player[playerid][TEMP_MODEL_NUM][i] = -1;
+		Player[playerid][TEMP_MODEL_PRICE][i] = 0;
+	}
 }
 public CreateGangZone()
 {
@@ -151,10 +157,10 @@ public SetPlayerEnvironment()
 	new string[64];
 	new weather = random(10);
 	SetWorldTime(worldHour++);
+
 	if(worldHour > 23)
-	{
 	    worldHour = 0;
-	}
+
 	SetWeather(weather);
 
 	format(string, sizeof(string),"SYSTEM)"#C_WHITE" 현재 게임시간은 "#C_GREEN"(%d)"#C_WHITE"시 입니다.",worldHour);

@@ -194,24 +194,26 @@
 #define C_dGREY "{222222}"
 #define C_WHITE "{FFFFFF}"
 //##################USER TIMER############################
-#define SECONDS 1000
-#define MINUTES SECONDS * 60
-#define HOURS MINUTES * 60
+#define SECONDS             1000 // millis
+#define MINUTES     SECONDS * 60
+#define HOURS       MINUTES * 60
 
 //##################USER DIALOG###########################
-#define DIALOG_LOG 0
-#define DIALOG_ID 1
-#define DIALOG_TUT 2
-#define DIALOG_V_CON 3
-#define DIALOG_V_IND 4
-#define DIALOG_V_LOW 5
-#define DIALOG_V_OFF 6
-#define DIALOG_V_SAL 7
-#define DIALOG_V_SPO 8
+#define DIALOG_LOG                             0        
+#define DIALOG_ID               DIALOG_LOG   + 1
+#define DIALOG_TUT              DIALOG_ID    + 1
+#define DIALOG_V_CON            DIALOG_TUT   + 1
+#define DIALOG_V_IND            DIALOG_V_CON + 1
+#define DIALOG_V_LOW            DIALOG_V_IND + 1
+#define DIALOG_V_OFF            DIALOG_V_LOW + 1
+#define DIALOG_V_SAL            DIALOG_V_OFF + 1
+#define DIALOG_V_SPO            DIALOG_V_SAL + 1
+#define DIALOG_V_VEH            DIALOG_V_SPO + 1
 //##################USER FUNCTION#########################
 forward CheckAccount(playerid);
 forward CheckPassword(playerid, password[]);
 forward InitUserData(playerid);
+forward InitUserTempData(playerid);
 forward LoadUserData(playerid);
 forward SaveUserData(playerid);
 forward ShowForICON(playerid);
@@ -235,6 +237,8 @@ enum PLAYER_INFO
 	TUTORIAL,
     LEVEL,
 	EXP,
+    TEMP_MODEL_NUM[50],
+    TEMP_MODEL_PRICE[50],
 	PLAY_TIME[3],
 	Float:POS[3]
 };

@@ -283,61 +283,86 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	{
 		case DIALOG_ID:
 		{
-			if(response) ShowPlayerDialog(playerid, DIALOG_ID, DIALOG_STYLE_MSGBOX, "LOGIN_ERROR", "계정 정보가 확인되지 않습니다.\n\"jsea.myq-see.com\"\n혹은 샘프 서버 정보창에서 보이는 URL을 클릭하여 사이트 가입 후 이용해 주시기 바랍니다.","확인","");
-			else Kick(playerid);
+			if(!response) Kick(playerid);
+			ShowPlayerDialog(playerid, DIALOG_ID, DIALOG_STYLE_MSGBOX, "LOGIN_ERROR", "계정 정보가 확인되지 않습니다.\n\"jsea.myq-see.com\"\n혹은 샘프 서버 정보창에서 보이는 URL을 클릭하여 사이트 가입 후 이용해 주시기 바랍니다.","확인","");
 			return 1;
 		}
 		case DIALOG_LOG:
 		{
-			if(!response) 
-				Kick(playerid);
-			md5(str, inputtext, sizeof(str));
+			if(!response) Kick(playerid);
+			
 			if(strlen(inputtext) <= 0)
 				ShowPlayerDialog(playerid, DIALOG_LOG, DIALOG_STYLE_PASSWORD,"USER_LOGIN","계정 비밀번호가 일치하지 않습니다. 다시 입력해주세요.\n(계정 비밀번호는 사이트의 비밀번호와 동일합니다.)","입력", "취소");
-			if(CheckPassword(playerid, str) == 0)
-
-			{
-				SendClientMessage(playerid, COLOR_RED, "INFO) "#C_WHITE"성공적으로 로그인이 되었습니다. 즐거운 게임 되시길 바랍니다.");
-				SpawnPlayer(playerid);
-			}
-			else ShowPlayerDialog(playerid, DIALOG_LOG, DIALOG_STYLE_PASSWORD,"USER_LOGIN","계정 비밀번호가 일치하지 않습니다. 다시 입력해주세요.\n(계정 비밀번호는 사이트의 비밀번호와 동일합니다.)","입력", "취소");
+			
+			md5(str, inputtext, sizeof(str));
+			
+			if(CheckPassword(playerid, str) != 0)
+				ShowPlayerDialog(playerid, DIALOG_LOG, DIALOG_STYLE_PASSWORD,"USER_LOGIN","계정 비밀번호가 일치하지 않습니다. 다시 입력해주세요.\n(계정 비밀번호는 사이트의 비밀번호와 동일합니다.)","입력", "취소");
+			
+			SendClientMessage(playerid, COLOR_RED, "INFO) "#C_WHITE"성공적으로 로그인이 되었습니다. 즐거운 게임 되시길 바랍니다.");
+			SpawnPlayer(playerid);
 			return 1;
 		}
 		case DIALOG_TUT:
 		{
-			new size = sizeof(VEHICLE_CONVERTIBLES);
-			if (response)
-				ShowPlayerDialog(playerid, DIALOG_V_CON, DIALOG_STYLE_PREVIEW_MODEL, "Vehicle Shop Dialog(VEHICLE_INDUSTRIAL)", ShowPlayerModelDialog(VEHICLE_INDUSTRIAL, size), "Purchase", "Cancel");
 			return 1;
 		}
 		case DIALOG_V_CON:
 		{
+			new size = sizeof(VEHICLE_CONVERTIBLES);
+			if (!response) return 0;
+			ShowPlayerDialog(playerid, DIALOG_V_VEH, DIALOG_STYLE_PREVIEW_MODEL, "Vehicle Shop Dialog", ShowPlayerModelDialog(playerid, VEHICLE_CONVERTIBLES, size), "Purchase", "Cancel");
 			return 1;
 		}
 		case DIALOG_V_IND:
 		{
-			new Float:X, Float: Y, Float: Z;
-			if(!response) return 0;
-			GetPlayerPos(playerid, X,Y,Z);
-	        new my_vehicle_id = CreateVehicle(VEHICLE_INDUSTRIAL[listitem][VEHILCE_MODELID],X,Y,Z, 0, 0, 0, -1);
-	        PutPlayerInVehicle(playerid, my_vehicle_id, 0);
-			return 1;
-
+			new size = sizeof(VEHICLE_INDUSTRIAL);
+			if (!response) return 0;
+			ShowPlayerDialog(playerid, DIALOG_V_VEH, DIALOG_STYLE_PREVIEW_MODEL, "Vehicle Shop Dialog", ShowPlayerModelDialog(playerid, VEHICLE_INDUSTRIAL, size), "Purchase", "Cancel");
+			return 1;	
 		}
 		case DIALOG_V_LOW:
 		{
+			new size = sizeof(VEHICLE_LOWRIDERS);
+			if (!response) return 0;
+			ShowPlayerDialog(playerid, DIALOG_V_VEH, DIALOG_STYLE_PREVIEW_MODEL, "Vehicle Shop Dialog", ShowPlayerModelDialog(playerid, VEHICLE_LOWRIDERS, size), "Purchase", "Cancel");
 			return 1;
 		}
 		case DIALOG_V_OFF:
 		{
+			new size = sizeof(VEHICLE_OFFROAD);
+			if (!response) return 0;
+			ShowPlayerDialog(playerid, DIALOG_V_VEH, DIALOG_STYLE_PREVIEW_MODEL, "Vehicle Shop Dialog", ShowPlayerModelDialog(playerid, VEHICLE_OFFROAD, size), "Purchase", "Cancel");
 			return 1;
 		}
 		case DIALOG_V_SAL: // 승용차
 		{
+			new size = sizeof(VEHICLE_SALOONS);
+			if (!response) return 0;
+			ShowPlayerDialog(playerid, DIALOG_V_VEH, DIALOG_STYLE_PREVIEW_MODEL, "Vehicle Shop Dialog", ShowPlayerModelDialog(playerid, VEHICLE_SALOONS, size), "Purchase", "Cancel");
 			return 1;
 		}
 		case DIALOG_V_SPO: 
 		{
+			new size = sizeof(VEHICLE_SPORTS);
+			if (!response) return 0;
+			ShowPlayerDialog(playerid, DIALOG_V_VEH, DIALOG_STYLE_PREVIEW_MODEL, "Vehicle Shop Dialog", ShowPlayerModelDialog(playerid, VEHICLE_SPORTS, size), "Purchase", "Cancel");
+			return 1;
+		}
+		case DIALOG_V_VEH:
+		{
+			new Float:X, Float: Y, Float: Z;
+			if(!response) return 0;
+			if(Player[playerid][MONEY] < Player[playerid][TEMP_MODEL_PRICE][listitem])
+			{
+				SendClientMessage(playerid, COLOR_RED, "SYSTEM) "#C_WHITE"구매하기 위한 금액이 모자랍니다.");
+				return 0;
+			}
+			GetPlayerPos(playerid, X,Y,Z);
+			Player[playerid][MONEY] -= Player[playerid][TEMP_MODEL_PRICE][listitem];
+	        new my_vehicle_id = CreateVehicle(Player[playerid][TEMP_MODEL_NUM][listitem], X, Y, Z, 0, 0, 0, -1);
+			SetPlayerMoney(playerid, Player[playerid][MONEY]);
+	        PutPlayerInVehicle(playerid, my_vehicle_id, 0);
 			return 1;
 		}
 		
