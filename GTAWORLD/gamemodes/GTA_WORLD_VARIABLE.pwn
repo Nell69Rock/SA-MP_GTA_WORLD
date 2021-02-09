@@ -201,8 +201,7 @@
 //##################USER DIALOG###########################
 #define DIALOG_LOG                             0        
 #define DIALOG_ID               DIALOG_LOG   + 1
-#define DIALOG_TUT              DIALOG_ID    + 1
-#define DIALOG_V_CON            DIALOG_TUT   + 1
+#define DIALOG_V_CON            DIALOG_ID    + 1
 #define DIALOG_V_IND            DIALOG_V_CON + 1
 #define DIALOG_V_LOW            DIALOG_V_IND + 1
 #define DIALOG_V_OFF            DIALOG_V_LOW + 1
