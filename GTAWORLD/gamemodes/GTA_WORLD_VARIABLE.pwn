@@ -210,8 +210,6 @@
 #define DIALOG_V_SPO            DIALOG_V_SAL + 1
 #define DIALOG_V_VEH            DIALOG_V_SPO + 1
 //##################USER FUNCTION#########################
-forward CheckAccount(playerid);
-forward CheckPassword(playerid, password[]);
 forward InitUserData(playerid);
 forward InitUserTempData(playerid);
 forward LoadUserData(playerid);
@@ -223,6 +221,18 @@ forward CreateGangZone();
 forward IsPlayerInArea(playerid);
 forward SetPlayerEnvironment();
 
+//##################USER_SQL FUNCTION#############################
+forward CheckAccount(playerid);
+forward CheckPassword(playerid, password[]);
+forward SQL_CALL_LoadUserData(playerid);
+forward LoadUserData(playerid);
+forward SaveUserData(playerid);
+forward SQL_CALL_LoadLocationData(playerid);
+forward LoadLocationData(playerid);
+forward SaveLocationData(playerid);
+forward SQL_CALL_LoadVehicleData(playerid);
+forward LoadVehicleData(playerid);
+forward SaveVehicleData(playerid);
 //##################USER VARIABLE#############################
 new MySQL:g_Sql;
 new worldHour = 0;
@@ -230,17 +240,16 @@ new worldHour = 0;
 
 enum PLAYER_INFO
 {
-	NAME[64],
 	PWD[65],
-    SPAWN,
     MONEY,
 	TUTORIAL,
+    SKIN,
     LEVEL,
 	EXP,
+    VEHICLE_ID,
     TEMP_MODEL_NUM[50],
     TEMP_MODEL_PRICE[50],
-	PLAY_TIME[3],
-	Float:POS[3]
+	PLAY_TIME[3]
 };
 new Player[MAX_PLAYERS][PLAYER_INFO];
 

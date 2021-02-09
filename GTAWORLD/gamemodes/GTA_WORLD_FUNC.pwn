@@ -1,4 +1,4 @@
-////////////////////////////////////////////////////////////////////////////////stock
+//##################stock FUNCTION#########################
 stock PlayerName(playerid)
 {
 	new UserName[64];
@@ -40,7 +40,60 @@ stock SetPlayerMoney(playerid, money)
     ResetPlayerMoney(playerid);
     GivePlayerMoney(playerid, money);
 }
-//////////////////////////////////////////////////////////////////////////////public
+
+//##################USER_SQL FUNCTION#########################
+public SQL_CALL_LoadUserData(playerid)
+{
+	new query[128];
+	mysql_format(g_Sql, query, sizeof(query), "SELECT * FROM user_account WHERE name = '%s';", PlayerName(playerid));
+	mysql_tquery(g_Sql, query, "LoadUserData", "d", playerid);
+}
+public LoadUserData(playerid)
+{
+	if(cache_num_rows() > 0){
+		cache_get_value_name_int(0, "tutorial", Player[playerid][TUTORIAL]);
+		cache_get_value_name_int(0, "skin", Player[playerid][SKIN]);
+		cache_get_value_name_int(0, "money", Player[playerid][MONEY]);
+		cache_get_value_name_int(0, "vehid", Player[playerid][VEHICLE_ID]);
+	}
+	return printf("LoadUserData Done!!!!");
+}
+public SQL_CALL_LoadLocationData(playerid)
+{
+	new query[128];
+	mysql_format(g_Sql, query, sizeof(query), "SELECT * FROM user_location WHERE name = '%s';", PlayerName(playerid));
+	mysql_tquery(g_Sql, query, "LoadLocationData", "d", playerid);
+}
+public LoadLocationData(playerid)
+{
+	new Float:X, Float:Y, Float:Z;
+	if(cache_num_rows() > 0){
+		cache_get_value_name_float(0, "x_pos", X);
+		cache_get_value_name_float(0, "y_pos", Y);
+		cache_get_value_name_float(0, "z_pos", Z);
+	}
+	SetPlayerPos(playerid, X, Y, Z);
+	return printf("LoadLocationData Done!!!!");
+}
+public SQL_CALL_LoadVehicleData(playerid)
+{
+	new query[128];
+	mysql_format(g_Sql, query, sizeof(query), "SELECT * FROM user_vehicle WHERE name = '%s' AND vehid = %d;", PlayerName(playerid), Player[playerid][VEHICLE_ID]);
+	mysql_tquery(g_Sql, query, "LoadVehicleData", "d", playerid);
+}
+public LoadVehicleData(playerid)
+{
+	new Float:X, Float:Y, Float:Z;
+	GetPlayerPos(playerid, X, Y, Z);
+	new Color[2];
+	if(cache_num_rows() > 0){
+		cache_get_value_name_int(0, "1_color", Color[0]);
+		cache_get_value_name_int(0, "2_color", Color[1]);
+	}
+	new my_vehicle_id = CreateVehicle(Player[playerid][VEHICLE_ID], X, Y, Z, 0, Color[0], Color[1], -1);
+	PutPlayerInVehicle(playerid, my_vehicle_id, 0);
+	return printf("LoadVehicleData Done!!!!");
+}
 public CheckAccount(playerid)
 {
     new string[256];
@@ -57,20 +110,22 @@ public CheckPassword(playerid, password[])
 	    return 0;
     return -1;
 }
+//##################USER FUNCTION#########################
+
 public InitUserData(playerid)
 {
-	Player[playerid][NAME] = PlayerName(playerid);
     Player[playerid][TUTORIAL] = 0;
     Player[playerid][LEVEL] = 0;
     Player[playerid][EXP] = 0;
-    Player[playerid][SPAWN] = 0;
-	Player[playerid][MONEY] = 5000;
+	Player[playerid][MONEY] = 0;
+	Player[playerid][SKIN] = 0;
+	Player[playerid][VEHICLE_ID] = 0;
 	for(new i = 0; i < 3; i++)
-	{
 		Player[playerid][PLAY_TIME][i] = 0;
-		Player[playerid][POS][i] = 0;
+	return ;
 	}
-}
+
+
 public InitUserTempData(playerid)
 {
 	for(new i = 0; i < 50; i++)
@@ -86,13 +141,8 @@ public CreateGangZone()
 }
 public ShowForGZ(playerid)
 {
-    if(Player[playerid][SPAWN] == 0)
-	{
 	    for(new i=0; i < sizeof(ZoneInfo); i++)
 		    GangZoneShowForPlayer(playerid, ZoneID[i], ZoneInfo[i][zColor]);
-		Player[playerid][SPAWN] = 1;
-	}
-	return 1;
 }
 public HideForGZ(playerid)
 {
@@ -113,6 +163,7 @@ public ShowForICON(playerid)
 			STYLE
 		 }
 	*/
+	/* GAS STATION*/
 	for(new i = 0; i < sizeof(IconInfo); i++)
 		SetPlayerMapIcon(playerid, i, IconInfo[i][iX], IconInfo[i][iY], IconInfo[i][iZ], IconInfo[i][MARKERTYPE], IconInfo[i][COLOR], IconInfo[i][STYLE]);
 }
@@ -167,4 +218,3 @@ public SetPlayerEnvironment()
 	SendClientMessageToAll(COLOR_RED, string);
 }
 
-//##################USER FUNCTION#########################
