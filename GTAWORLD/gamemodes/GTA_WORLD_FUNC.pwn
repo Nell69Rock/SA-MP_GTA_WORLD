@@ -117,14 +117,9 @@ public InitUserData(playerid)
     Player[playerid][TUTORIAL] = 0;
     Player[playerid][LEVEL] = 0;
     Player[playerid][EXP] = 0;
-<<<<<<< HEAD
 	Player[playerid][MONEY] = 0;
 	Player[playerid][SKIN] = 0;
 	Player[playerid][VEHICLE_ID] = 0;
-=======
-    Player[playerid][SPAWN] = 0;
-	Player[playerid][MONEY] = 15000;
->>>>>>> a7ceaf314dc39298ff579b1c50f7e6f5810c64ae
 	for(new i = 0; i < 3; i++)
 		Player[playerid][PLAY_TIME][i] = 0;
 	return ;
