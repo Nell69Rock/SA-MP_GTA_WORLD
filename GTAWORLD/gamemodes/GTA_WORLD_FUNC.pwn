@@ -42,6 +42,32 @@ stock SetPlayerMoney(playerid, money)
 }
 
 //##################USER_SQL FUNCTION#########################
+
+public SQL_CALL_CheckUserData(playerid)
+{
+	new query[128];
+	mysql_format(g_Sql, query, sizeof(query), "select * from user_account where exists (select * from user_account where name='%s';"), PlayerName(playerid));
+	mysql_tquery(g_Sql, query, "CheckUserData", "d", playerid);
+}
+public CheckUserData(playerid)
+{
+	if(cache_num_rows() > 0)
+	{
+		Player[playerid][RESULT] = 1;
+		return Player[playerid][RESULT]; // success
+	}
+	Player[playerid][RESULT] = 0;
+	return Player[playerid][RESULT]; // fail
+}
+public SQL_CALL_SetupUserData(playerid)
+{
+	new query[128];
+	mysql_format(g_Sql, query, sizeof(query), "INSERT INTO user_account (name, tutorial, skin, money, vehid) VALUES ('%s', 0, 0, 0, 0);", PlayerName(playerid));
+	mysql_tquery(g_Sql, query);
+
+	mysql_format(g_Sql, query, sizeof(query), "INSERT INTO user_loacation (name, x_pos, y_pos, z_pos) VALUES ('%s', 0, 0, 0);", PlayerName(playerid));
+	mysql_tquery(g_Sql, query);
+}
 public SQL_CALL_LoadUserData(playerid)
 {
 	new query[128];
@@ -74,6 +100,15 @@ public LoadLocationData(playerid)
 	}
 	SetPlayerPos(playerid, X, Y, Z);
 	return printf("LoadLocationData Done!!!!");
+}
+public SaveLocationData(playerid)
+{
+	new Float:X, Float:Y, Float:Z;
+	GetPlayerPos(playerid);
+	mysql_format(g_Sql, query, sizeof(query), "UPDATE user_location SET x_pos = %f, y_pos = %f, z_pos = %f  WHERE name = '%s';", 
+		PlayerName(playerid), X, Y, Z);
+	mysql_tquery(g_Sql, query);
+
 }
 public SQL_CALL_LoadVehicleData(playerid)
 {
@@ -141,8 +176,8 @@ public CreateGangZone()
 }
 public ShowForGZ(playerid)
 {
-	    for(new i=0; i < sizeof(ZoneInfo); i++)
-		    GangZoneShowForPlayer(playerid, ZoneID[i], ZoneInfo[i][zColor]);
+	for(new i=0; i < sizeof(ZoneInfo); i++)
+		GangZoneShowForPlayer(playerid, ZoneID[i], ZoneInfo[i][zColor]);
 }
 public HideForGZ(playerid)
 {
@@ -216,5 +251,25 @@ public SetPlayerEnvironment()
 
 	format(string, sizeof(string),"SYSTEM)"#C_WHITE" 현재 게임시간은 "#C_GREEN"(%d)"#C_WHITE"시 입니다.",worldHour);
 	SendClientMessageToAll(COLOR_RED, string);
+}
+
+public CheckUserTutorial(playerid)
+{
+	if(Player[playerid][TUTORIAL] > 0)
+		return;
+	Player[playerid][TUTORIAL] = 1;
+	return;
+}
+public CheckUserVehicle(playerid, vehidleid)
+{
+	new query[128];
+	new ret = 0;
+	mysql_format(g_Sql, query, sizeof(query), "select * from user_vehicle where exists (select * from user_vehicle where name='%s' and vehid=%d;"), PlayerName(playerid), vehidleid);
+	mysql_tquery(g_Sql, query, "CheckUserData", "d", playerid);
+
+	ret = CheckUserData(playerid);
+	if(ret)
+		ret = 0;
+	return ret;
 }
 

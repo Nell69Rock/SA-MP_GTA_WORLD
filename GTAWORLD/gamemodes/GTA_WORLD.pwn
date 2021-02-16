@@ -103,15 +103,27 @@ public OnPlayerDisconnect(playerid, reason)
 
 public OnPlayerSpawn(playerid)
 {
-	///########################INIT_DATA############################
+	///########################INIT_DATA#######################
 	InitUserData(playerid);
-	//########################ICONS############################
+	//#########################LOAD_DATA#######################
+	SQL_CALL_CheckUserData(playerid); // check first
+
+	if(Player[playerid][RESULT] > 0) // user data exitsts
+	{
+		SQL_CALL_LoadUserData(playerid);
+		SQL_CALL_LoadVehicleData(playerid);
+		SQL_CALL_LoadLocationData(playerid);
+		Player[playerid][RESULT] = 0; // user result init
+	} else SQL_CALL_SetupUserData(playerid);// make sql data;
+	
+	//#########################ICONS###########################
     ShowForICON(playerid);
-	//########################GANGZONE#########################
+	//#########################GANGZONE########################
  	ShowForGZ(playerid);
-	//########################TUTORIAL#########################
+	//#########################TUTORIAL########################
 	if(Player[playerid][TUTORIAL] == 0)
 	    ShowPlayerDialog(playerid, DIALOG_V_OFF, DIALOG_STYLE_MSGBOX,"튜토리얼", ShowUserText("tutorial_WORLD.txt"), "다음","");
+	else //spawn user location with include vehicle
 	return 1;
 }
 
@@ -349,11 +361,13 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		{
 			new Float:X, Float: Y, Float: Z;
 			if(!response) return 0;
+			CheckUserTutorial(playerid);
 			if(Player[playerid][MONEY] < Player[playerid][TEMP_MODEL_PRICE][listitem])
 			{
 				SendClientMessage(playerid, COLOR_RED, "SYSTEM) "#C_WHITE"구매하기 위한 금액이 모자랍니다.");
 				return 0;
 			}
+			CheckUserVehicle(playerid, Player[playerid][TEMP_MODEL_NUM][listitem]);
 			GetPlayerPos(playerid, X,Y,Z);
 			Player[playerid][MONEY] -= Player[playerid][TEMP_MODEL_PRICE][listitem];
 	        new my_vehicle_id = CreateVehicle(Player[playerid][TEMP_MODEL_NUM][listitem], X, Y, Z, 0, 0, 0, -1);

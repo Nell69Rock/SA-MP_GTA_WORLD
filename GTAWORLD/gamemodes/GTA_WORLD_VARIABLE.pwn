@@ -223,15 +223,19 @@ forward SetPlayerEnvironment();
 //##################USER_SQL FUNCTION#############################
 forward CheckAccount(playerid);
 forward CheckPassword(playerid, password[]);
+forward SQL_CALL_CheckUserData(playerid);
+forward CheckUserData(playerid);
+forward SQL_CALL_SetupUserData(playerid);
 forward SQL_CALL_LoadUserData(playerid);
 forward LoadUserData(playerid);
-forward SaveUserData(playerid);
 forward SQL_CALL_LoadLocationData(playerid);
 forward LoadLocationData(playerid);
 forward SaveLocationData(playerid);
 forward SQL_CALL_LoadVehicleData(playerid);
 forward LoadVehicleData(playerid);
 forward SaveVehicleData(playerid);
+forward CheckUserTutorial(playerid);
+forward CheckUserVehicle(playerid, vehidleid);
 //##################USER VARIABLE#############################
 new MySQL:g_Sql;
 new worldHour = 0;
@@ -245,6 +249,7 @@ enum PLAYER_INFO
     SKIN,
     LEVEL,
 	EXP,
+    RESULT,
     VEHICLE_ID,
     TEMP_MODEL_NUM[50],
     TEMP_MODEL_PRICE[50],
