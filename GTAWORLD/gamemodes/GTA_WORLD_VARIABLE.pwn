@@ -228,14 +228,23 @@ forward CheckUserData(playerid);
 forward SQL_CALL_SetupUserData(playerid);
 forward SQL_CALL_LoadUserData(playerid);
 forward LoadUserData(playerid);
+forward SaveUserMoney(playerid, money);
+forward SaveUserVehicle(playerid, vehicleid);
 forward SQL_CALL_LoadLocationData(playerid);
 forward LoadLocationData(playerid);
 forward SaveLocationData(playerid);
 forward SQL_CALL_LoadVehicleData(playerid);
 forward LoadVehicleData(playerid);
-forward SaveVehicleData(playerid);
+forward InsertUserVehicle(playerid, vehicleid, color1, color2);
+forward UpdateUserVehicle(playerid, vehicleid, color1, color2);
 forward CheckUserTutorial(playerid);
 forward CheckUserVehicle(playerid, vehidleid);
+
+
+
+
+forward SendUserErrorMessage(playerid, message[]);
+forward SendUserSuccessMessage(playerid, message[]);
 //##################USER VARIABLE#############################
 new MySQL:g_Sql;
 new worldHour = 0;

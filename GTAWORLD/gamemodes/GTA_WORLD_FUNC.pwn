@@ -39,6 +39,7 @@ stock SetPlayerMoney(playerid, money)
 {
     ResetPlayerMoney(playerid);
     GivePlayerMoney(playerid, money);
+	SaveUserMoney(playerid, money);
 }
 
 //##################USER_SQL FUNCTION#########################
@@ -46,7 +47,7 @@ stock SetPlayerMoney(playerid, money)
 public SQL_CALL_CheckUserData(playerid)
 {
 	new query[128];
-	mysql_format(g_Sql, query, sizeof(query), "select * from user_account where exists (select * from user_account where name='%s';"), PlayerName(playerid));
+	mysql_format(g_Sql, query, sizeof(query), "select * from user_account where exists (select * from user_account where name='%s';", PlayerName(playerid));
 	mysql_tquery(g_Sql, query, "CheckUserData", "d", playerid);
 }
 public CheckUserData(playerid)
@@ -54,10 +55,10 @@ public CheckUserData(playerid)
 	if(cache_num_rows() > 0)
 	{
 		Player[playerid][RESULT] = 1;
-		return Player[playerid][RESULT]; // success
+		return Player[playerid][RESULT]; // exist
 	}
 	Player[playerid][RESULT] = 0;
-	return Player[playerid][RESULT]; // fail
+	return Player[playerid][RESULT]; // not exist
 }
 public SQL_CALL_SetupUserData(playerid)
 {
@@ -82,8 +83,22 @@ public LoadUserData(playerid)
 		cache_get_value_name_int(0, "money", Player[playerid][MONEY]);
 		cache_get_value_name_int(0, "vehid", Player[playerid][VEHICLE_ID]);
 	}
-	return printf("LoadUserData Done!!!!");
+	return printf("%s LoadUserData Done!!!!", playerid);
 }
+public SaveUserMoney(playerid, money)
+{
+	new query[128];
+	mysql_format(g_Sql, query, sizeof(query), "UPDATE user_account SET money = %d  WHERE name = '%s';", money, playerid)
+	mysql_tquery(g_Sql, query);
+}
+public SaveUserVehicle(playerid, vehicleid) // update user vehicle
+{
+	new query[128];
+	mysql_format(g_Sql, query, sizeof(query), "UPDATE user_account SET vehid = %d  WHERE name = '%s';", vehicleid, playerid)
+	mysql_tquery(g_Sql, query);
+}
+
+
 public SQL_CALL_LoadLocationData(playerid)
 {
 	new query[128];
@@ -99,14 +114,15 @@ public LoadLocationData(playerid)
 		cache_get_value_name_float(0, "z_pos", Z);
 	}
 	SetPlayerPos(playerid, X, Y, Z);
-	return printf("LoadLocationData Done!!!!");
+	return printf("%s LoadLocationData Done!!!!", playerid);
 }
 public SaveLocationData(playerid)
 {
 	new Float:X, Float:Y, Float:Z;
-	GetPlayerPos(playerid);
-	mysql_format(g_Sql, query, sizeof(query), "UPDATE user_location SET x_pos = %f, y_pos = %f, z_pos = %f  WHERE name = '%s';", 
-		PlayerName(playerid), X, Y, Z);
+	new query[128];
+
+	GetPlayerPos(playerid, X, Y, Z);
+	mysql_format(g_Sql, query, sizeof(query), "UPDATE user_location SET x_pos = %f, y_pos = %f, z_pos = %f  WHERE name = '%s';", X, Y, Z, PlayerName(playerid));
 	mysql_tquery(g_Sql, query);
 
 }
@@ -121,13 +137,24 @@ public LoadVehicleData(playerid)
 	new Float:X, Float:Y, Float:Z;
 	GetPlayerPos(playerid, X, Y, Z);
 	new Color[2];
+
 	if(cache_num_rows() > 0){
 		cache_get_value_name_int(0, "1_color", Color[0]);
 		cache_get_value_name_int(0, "2_color", Color[1]);
 	}
 	new my_vehicle_id = CreateVehicle(Player[playerid][VEHICLE_ID], X, Y, Z, 0, Color[0], Color[1], -1);
 	PutPlayerInVehicle(playerid, my_vehicle_id, 0);
-	return printf("LoadVehicleData Done!!!!");
+	return printf("%s LoadVehicleData Done!!!!", playerid);
+}
+public InsertUserVehicle(playerid, vehicleid, color1, color2)
+{
+	new query[128];
+	mysql_format(g_Sql, query, sizeof(query), "INSERT INTO user_vehicle (name, vehid, color1, color2) VALUES ('%s', %d, %d, %d);", PlayerName(playerid), vehicleid, color1, color2);
+	mysql_tquery(g_Sql, query);
+}
+public UpdateUserVehicle(playerid, vehicleid, color1, color2)
+{
+	return;
 }
 public CheckAccount(playerid)
 {
@@ -135,7 +162,7 @@ public CheckAccount(playerid)
 	if(cache_num_rows() < 0)
 		ShowPlayerDialog(playerid, DIALOG_ID, DIALOG_STYLE_MSGBOX, "LOGIN_ERROR", "계정 정보가 확인되지 않습니다.\n\"Nell69Rock.myq-see.com/outpost\"\n혹은 샘프 서버 정보창에서 보이는 URL을 클릭하여 사이트 가입 후 이용해 주시기 바랍니다.","확인","");
 	
-	format(string,sizeof(string),"웹 페이지 계정\"%s\"의 회원 정보를 찾았습니다. 계정 비밀번호를 입력하세요.\n(계정 비밀번호는 사이트의 비밀번호와 동일합니다.)",PlayerName(playerid));
+	format(string,sizeof(string),"\"%s\"의 회원 정보를 찾았습니다. 계정 비밀번호를 입력하세요.\n(계정 비밀번호는 사이트의 비밀번호와 동일합니다.)",PlayerName(playerid));
 	ShowPlayerDialog(playerid, DIALOG_LOG, DIALOG_STYLE_PASSWORD,"USER_LOGIN",string,"입력", "취소");
 	cache_get_value_name(0, "password", Player[playerid][PWD], 65);
 }
@@ -264,12 +291,27 @@ public CheckUserVehicle(playerid, vehidleid)
 {
 	new query[128];
 	new ret = 0;
-	mysql_format(g_Sql, query, sizeof(query), "select * from user_vehicle where exists (select * from user_vehicle where name='%s' and vehid=%d;"), PlayerName(playerid), vehidleid);
+	mysql_format(g_Sql, query, sizeof(query), "select * from user_vehicle where exists (select * from user_vehicle where name='%s' and vehid=%d;", PlayerName(playerid), vehidleid);
 	mysql_tquery(g_Sql, query, "CheckUserData", "d", playerid);
 
 	ret = CheckUserData(playerid);
-	if(ret)
-		ret = 0;
-	return ret;
+
+	if(ret) // Exist
+		ret = 0; // fail
+
+	return ret; 
 }
 
+
+public SendUserErrorMessage(playerid, message[])
+{
+	new str[256];
+	format(str, sizeof(str), "SYSTEM) "#C_WHITE" %s", message);
+	return SendClientMessage(playerid, COLOR_RED, str);
+}
+public SendUserSuccessMessage(playerid, message[])
+{
+	new str[256];
+	format(str, sizeof(str), "SYSTEM) "#C_WHITE" %s", message);
+	return SendClientMessage(playerid, COLOR_SEAGREEN, str);
+}

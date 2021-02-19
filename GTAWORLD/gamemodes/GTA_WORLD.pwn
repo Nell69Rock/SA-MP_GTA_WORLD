@@ -123,7 +123,8 @@ public OnPlayerSpawn(playerid)
 	//#########################TUTORIAL########################
 	if(Player[playerid][TUTORIAL] == 0)
 	    ShowPlayerDialog(playerid, DIALOG_V_OFF, DIALOG_STYLE_MSGBOX,"튜토리얼", ShowUserText("tutorial_WORLD.txt"), "다음","");
-	else //spawn user location with include vehicle
+	// else //spawn user location with include vehicle
+
 	return 1;
 }
 
@@ -311,7 +312,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			if(CheckPassword(playerid, str) != 0)
 				ShowPlayerDialog(playerid, DIALOG_LOG, DIALOG_STYLE_PASSWORD,"USER_LOGIN","계정 비밀번호가 일치하지 않습니다. 다시 입력해주세요.\n(계정 비밀번호는 사이트의 비밀번호와 동일합니다.)","입력", "취소");
 			
-			SendClientMessage(playerid, COLOR_RED, "INFO) "#C_WHITE"성공적으로 로그인이 되었습니다. 즐거운 게임 되시길 바랍니다.");
+			SendUserSuccessMessage(playerid, "성공적으로 로그인이 되었습니다. 즐거운 게임 되시길 바랍니다.");
 			SpawnPlayer(playerid);
 			return 1;
 		}
@@ -360,19 +361,30 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		case DIALOG_V_VEH:
 		{
 			new Float:X, Float: Y, Float: Z;
+			new ret = 0;
 			if(!response) return 0;
-			CheckUserTutorial(playerid);
+			CheckUserTutorial(playerid); // 튜토리얼 끝내도록 하는 부분 .
 			if(Player[playerid][MONEY] < Player[playerid][TEMP_MODEL_PRICE][listitem])
 			{
-				SendClientMessage(playerid, COLOR_RED, "SYSTEM) "#C_WHITE"구매하기 위한 금액이 모자랍니다.");
+				SendUserErrorMessage(playerid, "구매하기 위한 금액이 모자랍니다.");
 				return 0;
 			}
-			CheckUserVehicle(playerid, Player[playerid][TEMP_MODEL_NUM][listitem]);
+			ret = CheckUserVehicle(playerid, Player[playerid][TEMP_MODEL_NUM][listitem]);
+			if(!ret)
+			{
+				SendUserErrorMessage(playerid, "이미 해당 차량을 보유하고 있습니다.");
+				return 0;
+			}
 			GetPlayerPos(playerid, X,Y,Z);
 			Player[playerid][MONEY] -= Player[playerid][TEMP_MODEL_PRICE][listitem];
+
+			DestroyVehicle(GetPlayerVehicleID(playerid)); // 현재 타고 있는 차량 제거.
+			SaveUserVehicle(playerid, Player[playerid][TEMP_MODEL_NUM][listitem]);
+			InsertUserVehicle(playerid, Player[playerid][TEMP_MODEL_NUM][listitem], 0, 0);
 	        new my_vehicle_id = CreateVehicle(Player[playerid][TEMP_MODEL_NUM][listitem], X, Y, Z, 0, 0, 0, -1);
-			SetPlayerMoney(playerid, Player[playerid][MONEY]);
 	        PutPlayerInVehicle(playerid, my_vehicle_id, 0);
+			SetPlayerMoney(playerid, Player[playerid][MONEY]);
+			SendUserSuccessMessage(playerid, "차량 구매를 완료하였습니다.");
 			return 1;
 		}
 		
